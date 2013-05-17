@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: mineShield
+  m_Shader: {fileID: 4800000, guid: ba1102178f8a1b9468fe49407c12a439, type: 3}
+  m_ShaderKeywords: []
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Texture
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Inside
+        second: 1.07462692
+      data:
+        first:
+          name: _Rim
+        second: 2
+      data:
+        first:
+          name: _Speed
+        second: .5
+      data:
+        first:
+          name: _Tile
+        second: 5
+      data:
+        first:
+          name: _Strength
+        second: 1.5
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .873134315, g: .49457258, b: 0, a: 1}

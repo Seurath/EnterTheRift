@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2c388a7b894fbcb4493e3d7ec347c601
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - shader: {fileID: 4800000, guid: 02dac55a67859ff4b9297e17aefd2cb6, type: 3}
+  - sourceScaled: {instanceID: 0}
+  - brightPass: {instanceID: 0}
+  - adaptedLuminanceCur: {instanceID: 0}
+  - adaptedLuminanceLast: {instanceID: 0}
+  - swap: {instanceID: 0}
+  - bloomSource: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

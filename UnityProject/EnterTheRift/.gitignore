@@ -1,1 +1,6 @@
 /Library/
+/Temp/
+/*.unityproj
+/*.csproj
+/*.sln
+/*.pidb

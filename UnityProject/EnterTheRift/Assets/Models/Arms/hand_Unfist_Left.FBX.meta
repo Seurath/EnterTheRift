@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: dc048c2ba1ce67647bdaa1f28885e51c
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bone024
+    100002: Bone025
+    100004: Bone026
+    100006: Bone027
+    100008: Bone028
+    100010: Bone029
+    100012: Bone030
+    100014: Bone031
+    100016: Bone032
+    100018: Bone033
+    100020: Bone034
+    100022: Bone035
+    100024: Bone036
+    100026: Bone037
+    100028: Bone038
+    100030: Box006
+    100032: connectBone006
+    100034: connectBone007
+    100036: connectBone008
+    100038: connectBone009
+    100040: connectBone010
+    100042: //RootNode
+    100044: wristBone001
+    400000: Bone024
+    400002: Bone025
+    400004: Bone026
+    400006: Bone027
+    400008: Bone028
+    400010: Bone029
+    400012: Bone030
+    400014: Bone031
+    400016: Bone032
+    400018: Bone033
+    400020: Bone034
+    400022: Bone035
+    400024: Bone036
+    400026: Bone037
+    400028: Bone038
+    400030: Box006
+    400032: connectBone006
+    400034: connectBone007
+    400036: connectBone008
+    400038: connectBone009
+    400040: connectBone010
+    400042: //RootNode
+    400044: wristBone001
+    2300000: Box006
+    3300000: Box006
+    4300000: Box006
+    7400000: unfist
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Box006
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: unfist
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 
