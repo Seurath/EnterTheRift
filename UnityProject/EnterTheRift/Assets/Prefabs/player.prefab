@@ -259,9 +259,8 @@ GameObject:
   - 4: {fileID: 400030}
   - 33: {fileID: 3300008}
   - 23: {fileID: 2300008}
-  - 114: {fileID: 11400022}
-  - 114: {fileID: 11400000}
   - 54: {fileID: 5400002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: tempHandLKinematic
   m_TagString: Untagged
@@ -284,8 +283,8 @@ GameObject:
   - 82: {fileID: 8200000}
   - 82: {fileID: 8200004}
   m_Layer: 8
-  m_Name: player
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -330,9 +329,8 @@ GameObject:
   - 4: {fileID: 400038}
   - 33: {fileID: 3300012}
   - 23: {fileID: 2300012}
-  - 114: {fileID: 11400026}
-  - 114: {fileID: 11400002}
   - 54: {fileID: 5400004}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: tempHandRKinematic
   m_TagString: Untagged
@@ -1307,7 +1305,7 @@ GameObject:
   - 33: {fileID: 3300034}
   - 23: {fileID: 2300034}
   m_Layer: 0
-  m_Name: body
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1398,6 +1396,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400174}
+  m_Layer: 0
+  m_Name: AudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -1442,7 +1455,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.39999998, z: 0}
   m_LocalScale: {x: .71389395, y: .719309092, z: .71389395}
   m_Children:
   - {fileID: 400168}
@@ -1597,9 +1610,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100032}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: -77.5278168, y: 16.1016655, z: 35.9739571}
+  m_LocalPosition: {x: 40.3342934, y: 3.62624025, z: 33.2470474}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
+  - {fileID: 400174}
   - {fileID: 400162}
   - {fileID: 400034}
   - {fileID: 400008}
@@ -2441,6 +2455,17 @@ Transform:
   m_LocalScale: {x: 3.75, y: 3.75, z: 3.75}
   m_Children: []
   m_Father: {fileID: 400002}
+--- !u!4 &400174
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100174}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: 26.8895264, y: -2.41749358, z: 22.1647015}
+  m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
+  m_Children: []
+  m_Father: {fileID: 400032}
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -3363,19 +3388,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
-  useHydra: 1
-  id: 0
+  isUsingHydra: 1
+  controllerId: 0
   player: {fileID: 11400004}
-  offset: {x: 0, y: 0, z: 0}
-  canSetShoulders: 1
-  shoulderSet: 0
-  leftStick: {x: 0, y: 0}
-  rightStick: {x: 0, y: 0}
-  handWorldPosition: {x: 0, y: 0, z: 0}
   skeletalHand: {fileID: 100090}
   dynamicCollider: {fileID: 11400056}
   cameraMount: {fileID: 400006}
-  fistsDisabled: 0
+  offset: {x: 0, y: 0, z: 0}
+  leftStick: {x: 0, y: 0}
+  rightStick: {x: 0, y: 0}
+  handWorldPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3386,19 +3408,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
-  useHydra: 1
-  id: 1
+  isUsingHydra: 1
+  controllerId: 1
   player: {fileID: 11400004}
-  offset: {x: 0, y: 0, z: 0}
-  canSetShoulders: 1
-  shoulderSet: 0
-  leftStick: {x: 0, y: 0}
-  rightStick: {x: 0, y: 0}
-  handWorldPosition: {x: 0, y: 0, z: 0}
   skeletalHand: {fileID: 100026}
   dynamicCollider: {fileID: 11400058}
   cameraMount: {fileID: 400006}
-  fistsDisabled: 0
+  offset: {x: 0, y: 0, z: 0}
+  leftStick: {x: 0, y: 0}
+  rightStick: {x: 0, y: 0}
+  handWorldPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3540,54 +3559,6 @@ MonoBehaviour:
   target: {fileID: 400038}
   transition: 1
   elbowAngle: 0
---- !u!114 &11400022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100030}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1cb96f603b536419335b950ae84db8, type: 3}
-  m_Name: 
-  id: 0
-  player: {fileID: 100032}
-  hand: {fileID: 0}
-  zOffset: 0
-  yOffset: 0
-  trigger: 0
-  bumper: 0
-  ikSetup: 0
-  shoulderSet: 0
-  wristSet: 0
-  shoulder: {fileID: 0}
-  wrist: {fileID: 0}
-  posMarker: {fileID: 0}
-  playerScript: {fileID: 0}
---- !u!114 &11400026
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100038}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1cb96f603b536419335b950ae84db8, type: 3}
-  m_Name: 
-  id: 1
-  player: {fileID: 100032}
-  hand: {fileID: 0}
-  zOffset: 0
-  yOffset: 0
-  trigger: 0
-  bumper: 0
-  ikSetup: 0
-  shoulderSet: 0
-  wristSet: 0
-  shoulder: {fileID: 0}
-  wrist: {fileID: 0}
-  posMarker: {fileID: 0}
-  playerScript: {fileID: 0}
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1

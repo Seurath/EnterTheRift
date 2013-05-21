@@ -440,6 +440,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432cf09dd226d43409029d0b1fe249ef, type: 3}
   m_Name: 
   key: {fileID: 0}
+  unlockedMessage: 
+  lockedMessage: 
+  messageRecipient: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
