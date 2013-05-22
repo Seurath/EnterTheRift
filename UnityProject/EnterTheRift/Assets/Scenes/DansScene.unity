@@ -184,7 +184,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &45383065
 BoxCollider:
@@ -207,13 +207,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1232135719}
   m_GameObject: {fileID: 45383064}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -356,6 +356,7 @@ GameObject:
   - 4: {fileID: 61316547}
   - 33: {fileID: 61316550}
   - 23: {fileID: 61316549}
+  - 95: {fileID: 61316548}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -375,6 +376,19 @@ Transform:
   m_Children:
   - {fileID: 854185553}
   m_Father: {fileID: 1626853455}
+--- !u!95 &61316548
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500004, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 375380199}
+  m_GameObject: {fileID: 61316546}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &61316549
 Renderer:
   m_ObjectHideFlags: 0
@@ -389,7 +403,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1342,7 +1356,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &102964642
 BoxCollider:
@@ -1365,13 +1379,13 @@ Renderer:
   m_PrefabInternal: {fileID: 193248467}
   m_GameObject: {fileID: 102964641}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1406,6 +1420,7 @@ GameObject:
   - 4: {fileID: 106852707}
   - 33: {fileID: 106852710}
   - 23: {fileID: 106852709}
+  - 95: {fileID: 106852708}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -1425,6 +1440,19 @@ Transform:
   m_Children:
   - {fileID: 1135108580}
   m_Father: {fileID: 1616795685}
+--- !u!95 &106852708
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 580623722}
+  m_GameObject: {fileID: 106852706}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &106852709
 Renderer:
   m_ObjectHideFlags: 0
@@ -1439,7 +1467,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1521,7 +1549,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &112946105
 BoxCollider:
@@ -1544,13 +1572,13 @@ Renderer:
   m_PrefabInternal: {fileID: 572545656}
   m_GameObject: {fileID: 112946104}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1771,7 +1799,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &127001446
 BoxCollider:
@@ -1794,13 +1822,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1181361326}
   m_GameObject: {fileID: 127001445}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2378,6 +2406,7 @@ GameObject:
   - 4: {fileID: 182190515}
   - 33: {fileID: 182190514}
   - 23: {fileID: 182190513}
+  - 95: {fileID: 182190512}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -2385,6 +2414,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &182190512
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500002, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1192210442}
+  m_GameObject: {fileID: 182190511}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &182190513
 Renderer:
   m_ObjectHideFlags: 0
@@ -2399,7 +2441,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2435,6 +2477,7 @@ GameObject:
   - 4: {fileID: 185014318}
   - 33: {fileID: 185014321}
   - 23: {fileID: 185014320}
+  - 95: {fileID: 185014319}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -2454,6 +2497,19 @@ Transform:
   m_Children:
   - {fileID: 294035784}
   m_Father: {fileID: 1616795685}
+--- !u!95 &185014319
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500002, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 580623722}
+  m_GameObject: {fileID: 185014317}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &185014320
 Renderer:
   m_ObjectHideFlags: 0
@@ -2468,7 +2524,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3173,6 +3229,7 @@ GameObject:
   - 4: {fileID: 239082344}
   - 33: {fileID: 239082347}
   - 23: {fileID: 239082346}
+  - 95: {fileID: 239082345}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -3192,6 +3249,19 @@ Transform:
   m_Children:
   - {fileID: 1376123703}
   m_Father: {fileID: 1876874827}
+--- !u!95 &239082345
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500002, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 108448461}
+  m_GameObject: {fileID: 239082343}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &239082346
 Renderer:
   m_ObjectHideFlags: 0
@@ -3206,7 +3276,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3406,6 +3476,8 @@ MonoBehaviour:
   maxTotal: 0
   spawnDelay: 1
   npcTypes: []
+  messageRecipient: {fileID: 0}
+  spawnsCompleteMessage: SpawnsComplete
 --- !u!23 &258893048
 Renderer:
   m_ObjectHideFlags: 0
@@ -3532,7 +3604,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &290101877
 BoxCollider:
@@ -3555,13 +3627,13 @@ Renderer:
   m_PrefabInternal: {fileID: 393102632}
   m_GameObject: {fileID: 290101876}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3868,19 +3940,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
-  useHydra: 1
-  id: 0
+  isUsingHydra: 1
+  controllerId: 0
   player: {fileID: 1129051655}
+  handAnimation: {fileID: 0}
+  dynamicCollider: {fileID: 355070120}
+  cameraMount: {fileID: 1258268212}
   offset: {x: 0, y: 0, z: 0}
-  canSetShoulders: 1
-  shoulderSet: 0
   leftStick: {x: 0, y: 0}
   rightStick: {x: 0, y: 0}
   handWorldPosition: {x: 0, y: 0, z: 0}
-  skeletalHand: {fileID: 0}
-  dynamicCollider: {fileID: 355070120}
-  cameraMount: {fileID: 1258268212}
-  fistsDisabled: 1
 --- !u!23 &335119876
 Renderer:
   m_ObjectHideFlags: 0
@@ -4423,7 +4492,6 @@ GameObject:
   - 81: {fileID: 361699981}
   - 114: {fileID: 361699980}
   - 114: {fileID: 361699979}
-  - 114: {fileID: 361699984}
   m_Layer: 8
   m_Name: CameraRight
   m_TagString: MainCamera
@@ -4500,7 +4568,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: .5
@@ -4519,23 +4587,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
---- !u!114 &361699984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 361699977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1352984e3c6465088f6cc7c4ce6e22, type: 3}
-  m_Name: 
-  glowIntensity: 1.01999998
-  blurIterations: 3
-  blurSpread: .629999995
-  glowTint: {r: .410447776, g: .410447776, b: .410447776, a: 0}
-  compositeShader: {fileID: 4800000, guid: 96ca71e39c7b6fb4f9bec2c5bf331349, type: 3}
-  blurShader: {fileID: 4800000, guid: fb52973118cf00648825ced2fcca240c, type: 3}
-  downsampleShader: {fileID: 4800000, guid: b14b79b8936134d3f8238f0c2d40d634, type: 3}
 --- !u!1 &363096545
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,7 +4733,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &367814197
 BoxCollider:
@@ -4705,13 +4756,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1221398323}
   m_GameObject: {fileID: 367814196}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8177,6 +8228,7 @@ GameObject:
   - 4: {fileID: 521428562}
   - 33: {fileID: 521428565}
   - 23: {fileID: 521428564}
+  - 95: {fileID: 521428563}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -8196,6 +8248,19 @@ Transform:
   m_Children:
   - {fileID: 1227729724}
   m_Father: {fileID: 1876874827}
+--- !u!95 &521428563
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 108448461}
+  m_GameObject: {fileID: 521428561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &521428564
 Renderer:
   m_ObjectHideFlags: 0
@@ -8210,7 +8275,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8565,7 +8630,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &550904157
 BoxCollider:
@@ -8588,13 +8653,13 @@ Renderer:
   m_PrefabInternal: {fileID: 553050902}
   m_GameObject: {fileID: 550904156}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9018,6 +9083,7 @@ GameObject:
   - 4: {fileID: 581528161}
   - 33: {fileID: 581528164}
   - 23: {fileID: 581528163}
+  - 95: {fileID: 581528162}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -9037,6 +9103,19 @@ Transform:
   m_Children:
   - {fileID: 1786200561}
   m_Father: {fileID: 117198318}
+--- !u!95 &581528162
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 691547718}
+  m_GameObject: {fileID: 581528160}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &581528163
 Renderer:
   m_ObjectHideFlags: 0
@@ -9051,7 +9130,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9075,6 +9154,7 @@ GameObject:
   - 4: {fileID: 583320054}
   - 33: {fileID: 583320057}
   - 23: {fileID: 583320056}
+  - 95: {fileID: 583320055}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -9094,6 +9174,19 @@ Transform:
   m_Children:
   - {fileID: 2072842110}
   m_Father: {fileID: 1626853455}
+--- !u!95 &583320055
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500006, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 375380199}
+  m_GameObject: {fileID: 583320053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &583320056
 Renderer:
   m_ObjectHideFlags: 0
@@ -9108,7 +9201,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9506,6 +9599,7 @@ GameObject:
   - 4: {fileID: 616062630}
   - 33: {fileID: 616062633}
   - 23: {fileID: 616062632}
+  - 95: {fileID: 616062631}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -9525,6 +9619,19 @@ Transform:
   m_Children:
   - {fileID: 816022739}
   m_Father: {fileID: 117198318}
+--- !u!95 &616062631
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500006, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 691547718}
+  m_GameObject: {fileID: 616062629}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &616062632
 Renderer:
   m_ObjectHideFlags: 0
@@ -9539,7 +9646,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9715,6 +9822,7 @@ GameObject:
   - 4: {fileID: 620269472}
   - 33: {fileID: 620269471}
   - 23: {fileID: 620269470}
+  - 95: {fileID: 620269469}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -9722,6 +9830,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &620269469
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500006, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 580623722}
+  m_GameObject: {fileID: 620269468}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &620269470
 Renderer:
   m_ObjectHideFlags: 0
@@ -9736,7 +9857,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10120,7 +10241,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &658672246
 BoxCollider:
@@ -10143,13 +10264,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1815070724}
   m_GameObject: {fileID: 658672245}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10395,7 +10516,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &686775187
 BoxCollider:
@@ -10418,13 +10539,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1226226102}
   m_GameObject: {fileID: 686775186}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10756,7 +10877,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 716282929}
@@ -10772,7 +10893,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 716282928}
   m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
   m_LocalPosition: {x: -42.336216, y: 37.2645607, z: 84.7790375}
@@ -10787,7 +10908,7 @@ Animator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: c7ed3db712f3e0e43943dd6cbe264bdf,
     type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 716282928}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1ed50277877116648b5f752d4d63feb4, type: 3}
@@ -11314,6 +11435,7 @@ GameObject:
   - 4: {fileID: 788844509}
   - 33: {fileID: 788844512}
   - 23: {fileID: 788844511}
+  - 95: {fileID: 788844510}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -11333,6 +11455,19 @@ Transform:
   m_Children:
   - {fileID: 1560957256}
   m_Father: {fileID: 1876874827}
+--- !u!95 &788844510
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500004, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 108448461}
+  m_GameObject: {fileID: 788844508}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &788844511
 Renderer:
   m_ObjectHideFlags: 0
@@ -11347,7 +11482,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -11934,7 +12069,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &825312783
 BoxCollider:
@@ -11957,13 +12092,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1478675715}
   m_GameObject: {fileID: 825312782}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -12092,6 +12227,7 @@ GameObject:
   - 4: {fileID: 831845277}
   - 33: {fileID: 831845280}
   - 23: {fileID: 831845279}
+  - 95: {fileID: 831845278}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -12111,6 +12247,19 @@ Transform:
   m_Children:
   - {fileID: 635590581}
   m_Father: {fileID: 117198318}
+--- !u!95 &831845278
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500004, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 691547718}
+  m_GameObject: {fileID: 831845276}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &831845279
 Renderer:
   m_ObjectHideFlags: 0
@@ -12125,7 +12274,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -12248,9 +12397,9 @@ Transform:
   m_Children:
   - {fileID: 1697971635}
   - {fileID: 592184771}
-  - {fileID: 716282929}
   - {fileID: 1832560086}
   - {fileID: 1432026276}
+  - {fileID: 716282929}
   m_Father: {fileID: 1093898026}
 --- !u!1 &836295577
 GameObject:
@@ -12326,7 +12475,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 836930615}
@@ -12342,7 +12491,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 836930614}
   m_LocalRotation: {x: 8.14603425e-08, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.83982325, y: -.259870976, z: -1.13593206e-08}
@@ -12354,7 +12503,7 @@ SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13700000, guid: c7ed3db712f3e0e43943dd6cbe264bdf,
     type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 836930614}
   m_Enabled: 1
   m_CastShadows: 1
@@ -12471,6 +12620,7 @@ GameObject:
   - 4: {fileID: 859396499}
   - 33: {fileID: 859396502}
   - 23: {fileID: 859396501}
+  - 95: {fileID: 859396500}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -12490,6 +12640,19 @@ Transform:
   m_Children:
   - {fileID: 1327387380}
   m_Father: {fileID: 1626853455}
+--- !u!95 &859396500
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 375380199}
+  m_GameObject: {fileID: 859396498}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &859396501
 Renderer:
   m_ObjectHideFlags: 0
@@ -12504,7 +12667,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -12919,50 +13082,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 375380199}
   m_GameObject: {fileID: 937997504}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &940181535
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 836292355}
-    m_Modifications:
-    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -42.336216
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 37.2645607
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 84.7790375
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -.707106829
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .707106829
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-      propertyPath: messageRecipient
-      value: 
-      objectReference: {fileID: 1515326317}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_RootGameObject: {fileID: 716282928}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &942003005
 GameObject:
   m_ObjectHideFlags: 0
@@ -13240,7 +13359,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &982782489
 BoxCollider:
@@ -13263,13 +13382,13 @@ Renderer:
   m_PrefabInternal: {fileID: 484640108}
   m_GameObject: {fileID: 982782488}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -13541,6 +13660,7 @@ GameObject:
   - 4: {fileID: 996573682}
   - 33: {fileID: 996573685}
   - 23: {fileID: 996573684}
+  - 95: {fileID: 996573683}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -13560,6 +13680,19 @@ Transform:
   m_Children:
   - {fileID: 806642951}
   m_Father: {fileID: 659695645}
+--- !u!95 &996573683
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1192210442}
+  m_GameObject: {fileID: 996573681}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &996573684
 Renderer:
   m_ObjectHideFlags: 0
@@ -13574,7 +13707,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14464,7 +14597,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1085464246
 BoxCollider:
@@ -14487,13 +14620,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1707320638}
   m_GameObject: {fileID: 1085464245}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15054,7 +15187,7 @@ GameObject:
   - 82: {fileID: 1129051660}
   - 82: {fileID: 1129051657}
   m_Layer: 8
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15999,6 +16132,7 @@ GameObject:
   - 4: {fileID: 1190609638}
   - 33: {fileID: 1190609641}
   - 23: {fileID: 1190609640}
+  - 95: {fileID: 1190609639}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -16018,6 +16152,19 @@ Transform:
   m_Children:
   - {fileID: 2113309626}
   m_Father: {fileID: 780210628}
+--- !u!95 &1190609639
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500002, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1430823403}
+  m_GameObject: {fileID: 1190609637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1190609640
 Renderer:
   m_ObjectHideFlags: 0
@@ -16032,7 +16179,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16102,7 +16249,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1200609182}
@@ -16117,7 +16264,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 1200609181}
   m_LocalRotation: {x: -.5, y: -.5, z: -.5, w: .5}
   m_LocalPosition: {x: -1.83982325, y: -.259870976, z: -1.13248824e-08}
@@ -17012,7 +17159,7 @@ MonoBehaviour:
   WireMode: 0
   LensCorrection: 1
   Chromatic: 1
-  BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  BackgroundColor: {r: .192000002, g: .301999986, b: .474999994, a: 1}
   NearClipPlane: .150000006
   FarClipPlane: 1000
 --- !u!1001 &1267238984
@@ -17214,6 +17361,7 @@ GameObject:
   - 4: {fileID: 1303103259}
   - 33: {fileID: 1303103262}
   - 23: {fileID: 1303103261}
+  - 95: {fileID: 1303103260}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -17233,6 +17381,19 @@ Transform:
   m_Children:
   - {fileID: 1156699833}
   m_Father: {fileID: 117198318}
+--- !u!95 &1303103260
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500002, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 691547718}
+  m_GameObject: {fileID: 1303103258}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1303103261
 Renderer:
   m_ObjectHideFlags: 0
@@ -17247,7 +17408,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18009,6 +18170,7 @@ GameObject:
   - 4: {fileID: 1354651126}
   - 33: {fileID: 1354651129}
   - 23: {fileID: 1354651128}
+  - 95: {fileID: 1354651127}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -18028,6 +18190,19 @@ Transform:
   m_Children:
   - {fileID: 1862153705}
   m_Father: {fileID: 659695645}
+--- !u!95 &1354651127
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500006, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1192210442}
+  m_GameObject: {fileID: 1354651125}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1354651128
 Renderer:
   m_ObjectHideFlags: 0
@@ -18042,7 +18217,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18142,7 +18317,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1363242508
 BoxCollider:
@@ -18165,13 +18340,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1239449334}
   m_GameObject: {fileID: 1363242507}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18512,42 +18687,6 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -4.37113883e-08
       objectReference: {fileID: 0}
-    - target: {fileID: 2000002, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000002, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000002, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400050, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: BackgroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400050, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: BackgroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400050, guid: 611220255fa83e14991106f38b363a73, type: 2}
-      propertyPath: BackgroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 611220255fa83e14991106f38b363a73, type: 2}
   m_RootGameObject: {fileID: 1129051653}
@@ -18704,7 +18843,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1402382254
 BoxCollider:
@@ -18727,13 +18866,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1685170587}
   m_GameObject: {fileID: 1402382253}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18957,7 +19096,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1414044721
 BoxCollider:
@@ -18980,13 +19119,13 @@ Renderer:
   m_PrefabInternal: {fileID: 2091365237}
   m_GameObject: {fileID: 1414044720}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19067,6 +19206,7 @@ GameObject:
   - 4: {fileID: 1416815910}
   - 33: {fileID: 1416815913}
   - 23: {fileID: 1416815912}
+  - 95: {fileID: 1416815911}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -19086,6 +19226,19 @@ Transform:
   m_Children:
   - {fileID: 546782827}
   m_Father: {fileID: 1626853455}
+--- !u!95 &1416815911
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500002, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 375380199}
+  m_GameObject: {fileID: 1416815909}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1416815912
 Renderer:
   m_ObjectHideFlags: 0
@@ -19100,7 +19253,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19598,6 +19751,7 @@ GameObject:
   - 4: {fileID: 1471609909}
   - 33: {fileID: 1471609912}
   - 23: {fileID: 1471609911}
+  - 95: {fileID: 1471609910}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -19617,6 +19771,19 @@ Transform:
   m_Children:
   - {fileID: 1104857391}
   m_Father: {fileID: 780210628}
+--- !u!95 &1471609910
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500004, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1430823403}
+  m_GameObject: {fileID: 1471609908}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1471609911
 Renderer:
   m_ObjectHideFlags: 0
@@ -19631,7 +19798,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20077,6 +20244,7 @@ GameObject:
   - 4: {fileID: 1498346450}
   - 33: {fileID: 1498346453}
   - 23: {fileID: 1498346452}
+  - 95: {fileID: 1498346451}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -20096,6 +20264,19 @@ Transform:
   m_Children:
   - {fileID: 597655289}
   m_Father: {fileID: 780210628}
+--- !u!95 &1498346451
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500006, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1430823403}
+  m_GameObject: {fileID: 1498346449}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1498346452
 Renderer:
   m_ObjectHideFlags: 0
@@ -20110,7 +20291,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20247,19 +20428,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
-  useHydra: 1
-  id: 0
+  isUsingHydra: 1
+  controllerId: 1
   player: {fileID: 1129051655}
+  handAnimation: {fileID: 0}
+  dynamicCollider: {fileID: 1635020290}
+  cameraMount: {fileID: 1258268212}
   offset: {x: 0, y: 0, z: 0}
-  canSetShoulders: 1
-  shoulderSet: 0
   leftStick: {x: 0, y: 0}
   rightStick: {x: 0, y: 0}
   handWorldPosition: {x: 0, y: 0, z: 0}
-  skeletalHand: {fileID: 0}
-  dynamicCollider: {fileID: 1635020290}
-  cameraMount: {fileID: 1258268212}
-  fistsDisabled: 1
 --- !u!23 &1513692867
 Renderer:
   m_ObjectHideFlags: 0
@@ -20419,6 +20597,7 @@ GameObject:
   - 4: {fileID: 1520852309}
   - 33: {fileID: 1520852312}
   - 23: {fileID: 1520852311}
+  - 95: {fileID: 1520852310}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -20438,6 +20617,19 @@ Transform:
   m_Children:
   - {fileID: 1285749874}
   m_Father: {fileID: 659695645}
+--- !u!95 &1520852310
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500004, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1192210442}
+  m_GameObject: {fileID: 1520852308}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1520852311
 Renderer:
   m_ObjectHideFlags: 0
@@ -20452,7 +20644,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21504,6 +21696,7 @@ GameObject:
   - 4: {fileID: 1637232535}
   - 33: {fileID: 1637232538}
   - 23: {fileID: 1637232537}
+  - 95: {fileID: 1637232536}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -21523,6 +21716,19 @@ Transform:
   m_Children:
   - {fileID: 1439390924}
   m_Father: {fileID: 1876874827}
+--- !u!95 &1637232536
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500006, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 108448461}
+  m_GameObject: {fileID: 1637232534}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1637232537
 Renderer:
   m_ObjectHideFlags: 0
@@ -21537,7 +21743,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21946,6 +22152,70 @@ Transform:
   m_LocalScale: {x: 2, y: .5, z: 2}
   m_Children: []
   m_Father: {fileID: 91117927}
+--- !u!1001 &1681915620
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 836292355}
+    m_Modifications:
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -42.336216
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 37.2645607
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 84.7790375
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 35.8818245
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 35.8818245
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 35.8818245
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: messageRecipient
+      value: 
+      objectReference: {fileID: 1515326317}
+    - target: {fileID: 11400000, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: switchEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+      propertyPath: switchHitMessage
+      value: IncrementCounter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
+  m_RootGameObject: {fileID: 716282928}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &1685170587
 Prefab:
   m_ObjectHideFlags: 0
@@ -22389,6 +22659,7 @@ GameObject:
   - 4: {fileID: 1740106204}
   - 33: {fileID: 1740106207}
   - 23: {fileID: 1740106206}
+  - 95: {fileID: 1740106205}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -22408,6 +22679,19 @@ Transform:
   m_Children:
   - {fileID: 219409822}
   m_Father: {fileID: 1616795685}
+--- !u!95 &1740106205
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500004, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 580623722}
+  m_GameObject: {fileID: 1740106203}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1740106206
 Renderer:
   m_ObjectHideFlags: 0
@@ -22422,7 +22706,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -23254,7 +23538,6 @@ GameObject:
   - 124: {fileID: 1818327945}
   - 114: {fileID: 1818327944}
   - 114: {fileID: 1818327943}
-  - 114: {fileID: 1818327947}
   m_Layer: 8
   m_Name: CameraLeft
   m_TagString: MainCamera
@@ -23322,7 +23605,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -23341,23 +23624,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
---- !u!114 &1818327947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1818327941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1352984e3c6465088f6cc7c4ce6e22, type: 3}
-  m_Name: 
-  glowIntensity: 1.01999998
-  blurIterations: 3
-  blurSpread: .629999995
-  glowTint: {r: .410447776, g: .410447776, b: .410447776, a: 0}
-  compositeShader: {fileID: 4800000, guid: 96ca71e39c7b6fb4f9bec2c5bf331349, type: 3}
-  blurShader: {fileID: 4800000, guid: fb52973118cf00648825ced2fcca240c, type: 3}
-  downsampleShader: {fileID: 4800000, guid: b14b79b8936134d3f8238f0c2d40d634, type: 3}
 --- !u!1 &1818832835
 GameObject:
   m_ObjectHideFlags: 0
@@ -23711,7 +23977,7 @@ Transform:
   m_GameObject: {fileID: 1832560085}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
   m_LocalPosition: {x: -104.816269, y: 21.2799034, z: 16.4483624}
-  m_LocalScale: {x: 35.8818245, y: 35.8818245, z: 35.8818245}
+  m_LocalScale: {x: 5.58108854, y: 5.58108854, z: 5.58108854}
   m_Children:
   - {fileID: 781942796}
   - {fileID: 1222432232}
@@ -24225,7 +24491,7 @@ Animation:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1882814640}
@@ -24243,7 +24509,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: c7ed3db712f3e0e43943dd6cbe264bdf, type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 1882814639}
   m_LocalRotation: {x: -.5, y: .5, z: .5, w: .5}
   m_LocalPosition: {x: -1.83982325, y: -.259870976, z: .117498264}
@@ -24255,7 +24521,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: c7ed3db712f3e0e43943dd6cbe264bdf,
     type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 1882814639}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -24270,7 +24536,7 @@ BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6500000, guid: c7ed3db712f3e0e43943dd6cbe264bdf,
     type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 1882814639}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -24283,7 +24549,7 @@ AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8200000, guid: c7ed3db712f3e0e43943dd6cbe264bdf,
     type: 2}
-  m_PrefabInternal: {fileID: 940181535}
+  m_PrefabInternal: {fileID: 1681915620}
   m_GameObject: {fileID: 1882814639}
   m_Enabled: 1
   serializedVersion: 3
@@ -25441,7 +25707,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1963868571
 BoxCollider:
@@ -25464,13 +25730,13 @@ Renderer:
   m_PrefabInternal: {fileID: 194689370}
   m_GameObject: {fileID: 1963868570}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -25576,6 +25842,7 @@ GameObject:
   - 4: {fileID: 1977257910}
   - 33: {fileID: 1977257913}
   - 23: {fileID: 1977257912}
+  - 95: {fileID: 1977257911}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -25595,6 +25862,19 @@ Transform:
   m_Children:
   - {fileID: 1575340269}
   m_Father: {fileID: 780210628}
+--- !u!95 &1977257911
+Animator:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 0a3eaf35532b06142a9550b66ce5a79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1430823403}
+  m_GameObject: {fileID: 1977257909}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
 --- !u!23 &1977257912
 Renderer:
   m_ObjectHideFlags: 0
@@ -25609,7 +25889,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -25916,6 +26196,8 @@ MonoBehaviour:
   spawnDelay: 2
   npcTypes:
   - {fileID: 400010, guid: 45a4f4037a536844284b5de52df61eed, type: 2}
+  messageRecipient: {fileID: 1070596489}
+  spawnsCompleteMessage: Destroy
 --- !u!1 &2026456183
 GameObject:
   m_ObjectHideFlags: 0
@@ -26895,7 +27177,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &2141255261
 BoxCollider:
@@ -26918,13 +27200,13 @@ Renderer:
   m_PrefabInternal: {fileID: 1303169731}
   m_GameObject: {fileID: 2141255260}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ef876f8d22090db45ac8f945b68da685, type: 2}
-  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
+  - {fileID: 2100000, guid: d85192885f87f1f4d92c6ab89b6a08fb, type: 2}
+  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

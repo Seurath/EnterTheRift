@@ -283,7 +283,7 @@ GameObject:
   - 82: {fileID: 8200000}
   - 82: {fileID: 8200004}
   m_Layer: 8
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3391,7 +3391,7 @@ MonoBehaviour:
   isUsingHydra: 1
   controllerId: 0
   player: {fileID: 11400004}
-  handAnimation: {fileID: 0}
+  skeletalHand: {fileID: 100090}
   dynamicCollider: {fileID: 11400056}
   cameraMount: {fileID: 400006}
   offset: {x: 0, y: 0, z: 0}
@@ -3411,7 +3411,7 @@ MonoBehaviour:
   isUsingHydra: 1
   controllerId: 1
   player: {fileID: 11400004}
-  handAnimation: {fileID: 0}
+  skeletalHand: {fileID: 100026}
   dynamicCollider: {fileID: 11400058}
   cameraMount: {fileID: 400006}
   offset: {x: 0, y: 0, z: 0}
