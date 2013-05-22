@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: spire
-  m_Shader: {fileID: 10, guid: 0000000000000000e000000000000000, type: 0}
+  m_Shader: {fileID: 12, guid: 0000000000000000e000000000000000, type: 0}
   m_ShaderKeywords: []
   m_SavedProperties:
     serializedVersion: 2
@@ -16,7 +16,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 969a3895feaebed40886c051c8ec8ed7, type: 3}
+          m_Texture: {fileID: 2800000, guid: bbe8fa885a7bcb54eab93241192107a5, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -30,31 +30,31 @@ Material:
         first:
           name: _Illum
         second:
-          m_Texture: {fileID: 2800000, guid: ec8719fc55454004c83a1b1d36d7146d, type: 3}
+          m_Texture: {fileID: 2800000, guid: 263d2574053319c4c94db6ca8218a81d, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Shininess
-        second: .078125
-      data:
-        first:
-          name: _InvFade
-        second: 1
+        second: .71931684
       data:
         first:
           name: _EmissionLM
         second: 0
+      data:
+        first:
+          name: _InvFade
+        second: 1
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .940298498, g: .940298498, b: .940298498, a: 1}
+        second: {r: .589552283, g: .589552283, b: .589552283, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .636221886, g: .810696542, b: .835820913, a: 1}
+        second: {r: .298229009, g: .592022121, b: .634328365, a: 1}
       data:
         first:
           name: _TintColor

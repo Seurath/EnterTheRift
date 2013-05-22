@@ -30,11 +30,11 @@ Material:
       data:
         first:
           name: _Inside
-        second: 0
+        second: 1.07692301
       data:
         first:
           name: _Rim
-        second: 2
+        second: .692307711
       data:
         first:
           name: _Speed
@@ -51,4 +51,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .559701502, g: .778311312, b: 1, a: .223529413}
+        second: {r: .402985096, g: .824653029, b: 1, a: .788235307}

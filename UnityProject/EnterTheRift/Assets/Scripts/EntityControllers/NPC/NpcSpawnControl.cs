@@ -12,12 +12,9 @@ public class NpcSpawnControl : MonoBehaviour {
 	public Transform[] npcTypes;
 	
 	private bool[] usedSpawnPoints;
-	private float spawnTimer = -1.0f;
+	private float spawnTimer = 0.0f;
 	private List<Transform> activeNpcs = new List<Transform>();
 	private int totalSpawned = 0;
-	
-	public GameObject messageRecipient;
-	public string spawnsCompleteMessage = "SpawnsComplete";
 	
 	// Use this for initialization
 	void Start () {
@@ -36,10 +33,6 @@ public class NpcSpawnControl : MonoBehaviour {
 		}
 		
 		usedSpawnPoints = new bool[spawnPoints.Length];
-	}
-	
-	void StartFromPort()
-	{
 		spawnTimer = spawnDelay;
 	}
 	
@@ -79,27 +72,14 @@ public class NpcSpawnControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		activeNpcs.Remove(null);
-		
 		if(maxTotal > 0 && totalSpawned >= maxTotal)
 		{
-			if(activeNpcs.Count == 0)
-			{
-				// Stop updating this spawn control
-				if(messageRecipient != null)
-				{
-					messageRecipient.BroadcastMessage(spawnsCompleteMessage);
-				}
-				enabled = false;
-			}
-			
+			// Stop updating this spawn control
+			enabled = false;
 			return;
 		}
 		
-		if(spawnTimer < 0.0f)
-		{
-			return;
-		}
+		activeNpcs.Remove(null);
 		
 		if(activeNpcs.Count < maxSimultaneous)
 		{

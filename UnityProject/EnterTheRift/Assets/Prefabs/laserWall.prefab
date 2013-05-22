@@ -77,7 +77,6 @@ GameObject:
   - 4: {fileID: 400008}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
-  - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -95,7 +94,6 @@ GameObject:
   - 4: {fileID: 400010}
   - 33: {fileID: 3300006}
   - 23: {fileID: 2300006}
-  - 95: {fileID: 9500002}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -215,7 +213,6 @@ GameObject:
   - 4: {fileID: 400024}
   - 33: {fileID: 3300016}
   - 23: {fileID: 2300016}
-  - 95: {fileID: 9500004}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -233,7 +230,6 @@ GameObject:
   - 4: {fileID: 400026}
   - 33: {fileID: 3300018}
   - 23: {fileID: 2300018}
-  - 95: {fileID: 9500006}
   m_Layer: 0
   m_Name: laserLineBot
   m_TagString: Untagged
@@ -298,8 +294,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.04829788, y: 5.26498032, z: -240.613785}
+  m_LocalRotation: {x: 0, y: .00229293294, z: 0, w: -.999997377}
+  m_LocalPosition: {x: -5.13708687, y: 5.26498032, z: 371.092133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -544,7 +540,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
+  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -563,7 +559,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
+  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -654,7 +650,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
+  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -673,7 +669,7 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 37b19ee5eae228f439c6acdb64ff0fe5, type: 2}
-  - {fileID: 2100000, guid: 7f96420944ec28e4690626607402e1c2, type: 2}
+  - {fileID: 2100000, guid: 99aa7b91567f52e44b3398781a8ead93, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -811,54 +807,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 86.4100037, y: 45.7799988, z: 7.19999981}
   m_Center: {x: -39.4000015, y: .699999988, z: 0}
---- !u!95 &9500000
-Animator:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
---- !u!95 &9500002
-Animator:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
---- !u!95 &9500004
-Animator:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100024}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
---- !u!95 &9500006
-Animator:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100026}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 97ffe541ab476a744b46e507b25d80c8, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1

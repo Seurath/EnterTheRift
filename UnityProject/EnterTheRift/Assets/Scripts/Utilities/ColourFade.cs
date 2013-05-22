@@ -70,10 +70,10 @@ public class ColourFade : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animatedText = new AnimatedText(introText, timeBetweenLetters, fullMessageDisplayTime);
-		leftHand.CanSetShoulders = false;
-		leftHand.FistsDisabled = true;
-		rightHand.CanSetShoulders = false;
-		rightHand.FistsDisabled = true;
+		leftHand.canSetShoulders = false;
+		leftHand.fistsDisabled = true;
+		rightHand.canSetShoulders = false;
+		rightHand.fistsDisabled = true;
 	}
 	
 	// Update is called once per frame
@@ -96,10 +96,10 @@ public class ColourFade : MonoBehaviour {
 		
 		if(drawInstructions && animatedText.currentText == instructionsText)
 		{
-			leftHand.CanSetShoulders = true;
-			rightHand.CanSetShoulders = true;
+			leftHand.canSetShoulders = true;
+			rightHand.canSetShoulders = true;
 
-			if(leftHand.IsShoulderSet && rightHand.IsShoulderSet)
+			if(leftHand.shoulderSet && rightHand.shoulderSet)
 			{
 				animatedText = new AnimatedText(goodLuckText, timeBetweenLetters, 0.0f);
 				drawInstructions = false;
@@ -112,8 +112,8 @@ public class ColourFade : MonoBehaviour {
 			fadeTimer += Time.deltaTime;
 			if(fadeTimer >= fadeTime)
 			{
-				leftHand.FistsDisabled = false;
-				rightHand.FistsDisabled = false;
+				leftHand.fistsDisabled = false;
+				rightHand.fistsDisabled = false;
 				Destroy (gameObject);
 			}
 		}

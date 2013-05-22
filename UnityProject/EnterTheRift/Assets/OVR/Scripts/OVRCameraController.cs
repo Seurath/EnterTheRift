@@ -137,6 +137,8 @@ public class OVRCameraController : OVRComponent
 		// Get the values for both IPD and lens distortion correction shift. We don't normally
 		// need to set the PhysicalLensOffset once it's been set here.
 		OVRDevice.CalculatePhysicalLensOffsets(ref LensOffsetLeft, ref LensOffsetRight);
+		//LensOffsetLeft *= 2;
+		//LensOffsetRight *= 2;
 		
 		// Using the calculated FOV, based on distortion parameters, yeilds the best results.
 		// However, public functions will allow to override the FOV if desired
