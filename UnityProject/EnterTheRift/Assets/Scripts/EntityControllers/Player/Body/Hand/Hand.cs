@@ -13,7 +13,7 @@ public class Hand : MonoBehaviour
 	
 	[SerializeField] private bool isUsingHydra = true;
 	[SerializeField] private ControllerId controllerId = ControllerId.Undefined;
-	[SerializeField] private PunchPlayer player = null;
+	[SerializeField] private BodyController player = null;
 	[SerializeField] private Animation handAnimation = null;
 	[SerializeField] private HandGrab dynamicCollider = null;
 	[SerializeField] private Transform cameraMount = null;
@@ -23,9 +23,9 @@ public class Hand : MonoBehaviour
 	[SerializeField] private Vector2 rightStick;
 	[SerializeField] private Vector3 handWorldPosition;
 	
-	public bool FistsDisabled { get; set; }
-	public bool CanSetShoulders { get; set; }
-	public bool IsShoulderSet { get; set; }
+	public bool IsFistDisabled { get; set; }
+	public bool CanCalibrate { get; set; }
+	public bool IsCalibrated { get; set; }
 	
 	private bool isTriggerDown = false;
 	
@@ -84,8 +84,8 @@ public class Hand : MonoBehaviour
 	
 	private void Initialize ()
 	{
-		this.FistsDisabled = true;
-		this.CanSetShoulders = true;
+		this.IsFistDisabled = true;
+		this.CanCalibrate = true;
 	}
 	
 	#endregion Initialization
@@ -97,57 +97,67 @@ public class Hand : MonoBehaviour
 	{
 		SixenseInput.Controller controller = SixenseInput.Controllers[(int) this.controllerId];
 		
+		// Trigger data.
+		UpdateHydraTrigger(controller);
+		
 		// Position data.
 		UpdateHydraPosition(controller);
 			
 		// Rotation data.
 		UpdateHydraRotation(controller);
 		
-		if (this.CanSetShoulders)
-		{
-			if (controller.Trigger >= 0.9f 
-				&& !this.isTriggerDown) 
-			{
-				this.isTriggerDown = true;
-				
-				// Allow the user to set the base position by pressing the trigger.
-				if (!IsShoulderSet)
-				{
-					this.offset = new Vector3(0.0f, 0.0f, controller.Position.z * 0.005f);
-					this.IsShoulderSet = true;
-				}
-				else if (handAnimation != null)
-				{
-					this.handAnimation.Play("fist");
-					this.dynamicCollider.GrabItems();
-				}
-			}
-			else if (isTriggerDown && controller.Trigger < 0.05) {
-				isTriggerDown = false;
-				if(handAnimation != null)
-				{
-					handAnimation.Play ("unfist");
-					dynamicCollider.LetGoOfItems();
-				}
-			}
-		}
-		
 		// Send analog stick values to the player, for movement purposes.
 		UpdateHydraAnalogStick(controller);
+	}
+	
+	private void UpdateHydraTrigger (SixenseInput.Controller controller)
+	{
+		if (controller.Trigger < InputManager.HydraSensitivity.TriggerPress)
+		{
+			// Trigger is not pressed.
+			
+			if (controller.Trigger < InputManager.HydraSensitivity.TriggerRelease) 
+			{
+				this.isTriggerDown = false;
+				SetHandFist(false);
+			}
+			
+			return;
+		}
+		
+		if (this.CanCalibrate
+			&& !this.IsCalibrated)
+		{
+			CalibrateHydra(controller);
+			return;
+		}
+		
+		this.isTriggerDown = true;
+		
+		SetHandFist(true);
+	}
+	
+	private void CalibrateHydra (SixenseInput.Controller controller)
+	{
+		this.offset = new Vector3(0.0f, 0.0f, controller.Position.z * InputManager.HydraSensitivity.Position);
+		this.IsCalibrated = true;
 	}
 	
 	private void UpdateHydraPosition (SixenseInput.Controller controller)
 	{
 		Vector3 controllerPosition = controller.Position;
-		Vector3 desiredLocalPosition = new Vector3(controllerPosition.x * .005f,
-												   controllerPosition.y * .005f,
-												   controllerPosition.z * .005f) - offset;
+		Vector3 desiredLocalPosition = new Vector3(
+			controllerPosition.x * InputManager.HydraSensitivity.Position,
+			controllerPosition.y * InputManager.HydraSensitivity.Position,
+			controllerPosition.z * InputManager.HydraSensitivity.Position) 
+			- this.offset;
+		
 		if (this.cameraMount != null)
 		{
 			desiredLocalPosition = cameraMount.transform.localRotation * desiredLocalPosition;
 		}
 		
-		if (this.FistsDisabled)
+		if (this.IsFistDisabled)
 		{
 			if (controllerId == ControllerId.Left)
 			{
@@ -168,7 +178,7 @@ public class Hand : MonoBehaviour
 												 controller.Rotation.y,
 												 controller.Rotation.z,
 												 controller.Rotation.w);
-		if (this.FistsDisabled)
+		if (this.IsFistDisabled)
 		{
 			this.transform.localRotation = new Quaternion();
 		}
@@ -195,18 +205,19 @@ public class Hand : MonoBehaviour
 	{
 		float triggerValue = Input.GetAxis ("Triggers");
 
-		if(controllerId == 0)
+		if (controllerId == 0)
 		{
-			if(triggerValue > 0.8f)
+			if (triggerValue > 0.8f)
 			{
 				leftStick = new Vector2();
 				transform.localPosition = new Vector3(
-											(Mathf.Clamp (Input.GetAxis ("HorizontalL"), -0.75f, 0.75f) - 0.25f) * 2.0f,
-											Mathf.Clamp (Input.GetAxis ("VerticalR"), -0.75f, 0.75f) * -2.0f,
-											Mathf.Clamp (Input.GetAxis ("VerticalL"), -0.75f, 0.75f) + 0.25f) +
-										  offset;
+					(Mathf.Clamp (Input.GetAxis ("HorizontalL"), -0.75f, 0.75f) - 0.25f) * 2.0f,
+					Mathf.Clamp (Input.GetAxis ("VerticalR"), -0.75f, 0.75f) * -2.0f,
+					Mathf.Clamp (Input.GetAxis ("VerticalL"), -0.75f, 0.75f) + 0.25f) +
+					offset;
 				
-				if(!isTriggerDown && handAnimation != null)
+				if (!isTriggerDown 
+					&& handAnimation != null)
 				{
 					handAnimation.Play("fist");
 					isTriggerDown = true;
@@ -255,4 +266,34 @@ public class Hand : MonoBehaviour
 	
 	#endregion Gamepad Input Controls
 	
+
+	#region Hand Control
+	
+	public void SetHandFist (bool isEnabled)
+	{
+		bool isHandAnimationSet = this.handAnimation != null;
+		
+		if (isEnabled)
+		{
+			// Fist
+			this.dynamicCollider.GrabItems();
+			
+			if (isHandAnimationSet)
+			{
+				this.handAnimation.Play("fist");
+			}
+		} 
+		else 
+		{
+			// Unfist
+			this.dynamicCollider.LetGoOfItems();
+			
+			if (isHandAnimationSet)
+			{
+				this.handAnimation.Play ("unfist");
+			}
+		}
+		
+	}
+	#endregion Hand Control
 }

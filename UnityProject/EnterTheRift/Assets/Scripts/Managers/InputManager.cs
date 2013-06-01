@@ -4,6 +4,13 @@ using System;
 
 public class InputManager : MonoBehaviour
 {
+	public static class HydraSensitivity
+	{
+		public const float TriggerPress = 0.9f;
+		public const float TriggerRelease = 0.05f;
+		public const float Position = 0.005f;
+	}
+	
 	public enum HydraControllerId
 	{
 		Undefined = -1,

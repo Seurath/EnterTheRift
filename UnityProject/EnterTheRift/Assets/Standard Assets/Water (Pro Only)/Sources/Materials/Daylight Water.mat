@@ -81,20 +81,24 @@ Material:
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
-          name: _RefrColor
-        second: {r: 0, g: .611940265, b: .483561188, a: 1}
-      data:
-        first:
-          name: _Fresnel_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
-      data:
-        first:
           name: _BumpMap_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
+          name: _RefrColor
+        second: {r: 0, g: .611940265, b: .483561188, a: 1}
+      data:
+        first:
           name: WaveSpeed
         second: {r: 300, g: 150, b: -300, a: -150}
+      data:
+        first:
+          name: _HorizonColor
+        second: {r: 1, g: 1, b: 1, a: 0}
+      data:
+        first:
+          name: _Fresnel_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
           name: _ReflectiveColor_ST
@@ -103,10 +107,6 @@ Material:
         first:
           name: _ReflectiveColorCube_ST
         second: {r: 1, g: 1, b: 0, a: 0}
-      data:
-        first:
-          name: _HorizonColor
-        second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
           name: _ReflectionTex_ST
