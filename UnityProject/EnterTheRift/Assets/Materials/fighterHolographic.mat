@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: selfIllum
-  m_Shader: {fileID: 10, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: fighterHolographic
+  m_Shader: {fileID: 4800000, guid: ba1102178f8a1b9468fe49407c12a439, type: 3}
   m_ShaderKeywords: []
   m_SavedProperties:
     serializedVersion: 2
@@ -21,7 +21,7 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Illum
+          name: _Texture
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -29,10 +29,26 @@ Material:
     m_Floats:
       data:
         first:
-          name: _EmissionLM
-        second: 0
+          name: _Inside
+        second: .74626863
+      data:
+        first:
+          name: _Rim
+        second: .811940372
+      data:
+        first:
+          name: _Speed
+        second: .5
+      data:
+        first:
+          name: _Tile
+        second: 5
+      data:
+        first:
+          name: _Strength
+        second: 1.5
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: 1, g: .356643379, b: 0, a: 1}
+        second: {r: .50746268, g: .710677266, b: 1, a: 1}
