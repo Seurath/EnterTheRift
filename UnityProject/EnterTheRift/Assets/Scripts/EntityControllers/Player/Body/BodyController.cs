@@ -19,13 +19,13 @@ public class BodyController : MonoBehaviour
 	
 	private CharacterController cc;
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		cc = (CharacterController)GetComponent (typeof(CharacterController));
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		// Handle movement
 		float xMovement = joystickLeft.x;
 		xMovement *= moveSpeed * strafeMultiplier;

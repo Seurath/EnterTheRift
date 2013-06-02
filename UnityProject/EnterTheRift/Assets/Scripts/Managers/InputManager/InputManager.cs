@@ -1,6 +1,15 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
+
+public enum HydraControllerId
+{
+	Undefined = -1,
+	Left = 0,
+	Right = 1,
+	Count
+}
 
 public class InputManager : MonoBehaviour
 {
@@ -11,26 +20,57 @@ public class InputManager : MonoBehaviour
 		public const float Position = 0.005f;
 	}
 	
-	public enum HydraControllerId
-	{
-		Undefined = -1,
-		Left = 0,
-		Right = 1
-	}
-	
 	[SerializeField] private Transform cameraMount = null;
-	
 	[SerializeField] private bool isUsingHydra = true;
-	[SerializeField] private bool canSetShoulders = true;
-	[SerializeField] private bool isShoulderSet = false;
-	[SerializeField] private bool isTriggerDown = false;
 	
 	[SerializeField] private Vector3 offset;
 	[SerializeField] private Vector2 leftStick;
 	[SerializeField] private Vector2 rightStick;
 	
-	public Action<Vector2> LeftStickUpdatedAction;
-	public Action<Vector2> RightStickUpdatedAction;
+	/// <summary>
+	/// Sixense input script that comes packed inside the Sixense Unity Plugin.
+	/// </summary>
+	/// <remarks>
+	/// The reference to this script should be set inside ManagerFactory.
+	/// </remarks>
+	public SixenseInput sixenseInputScript { get; set; }
+	
+	/// <summary>
+	/// Whether calls can be made to Sixense input.
+	/// </summary>
+	public bool HasSixenseInput
+	{
+		get { return this.sixenseInputScript != null; }
+	}
+	
+	public int NumHyrdaControllers { get { return (int) HydraControllerId.Count; } }
+	
+	
+	#region Callbacks
+	
+	private List<HydraCallbacks> hydraCallbacks = new List<HydraCallbacks>((int) HydraControllerId.Count);
+	public List<HydraCallbacks> HydraCallbacks
+	{
+		get {
+			if (this.hydraCallbacks.Count == 0)
+			{
+				// Initialize all Hydra controller callback objects.
+				for (int i = 0; i < this.hydraCallbacks.Count; i++)
+				{
+					this.hydraCallbacks[i] = new HydraCallbacks();
+				}
+			}
+			return this.hydraCallbacks;
+		}
+	}
+	
+	private GamepadCallbacks gamepadCallbacks = new GamepadCallbacks();
+	public GamepadCallbacks GamepadCallbacks
+	{
+		get { return this.gamepadCallbacks; }
+	}
+	
+	#endregion Callbacks
 	
 	
 	#region MonoBehaviour
@@ -108,11 +148,11 @@ public class InputManager : MonoBehaviour
 	{
 		if (id == HydraControllerId.Left) 
 		{
-			this.LeftStickUpdatedAction(new Vector2(controller.JoystickX, controller.JoystickY));
+			this.hydraCallbacks[(int)id].StickAction(new Vector2(controller.JoystickX, controller.JoystickY));
 		}
 		if (id == HydraControllerId.Right) 
 		{
-			this.RightStickUpdatedAction(new Vector2(controller.JoystickX, controller.JoystickY));
+			this.hydraCallbacks[(int)id].StickAction(new Vector2(controller.JoystickX, controller.JoystickY));
 		}
 	}
 	
