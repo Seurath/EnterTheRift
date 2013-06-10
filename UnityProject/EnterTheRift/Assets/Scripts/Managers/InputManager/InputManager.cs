@@ -3,6 +3,14 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
+public enum InputId
+{
+	Undefined = -1,
+	MouseAndKeyboard,
+	Gamepad,
+	Hydra
+}
+
 public enum HydraControllerId
 {
 	Undefined = -1,
@@ -20,9 +28,17 @@ public class InputManager : MonoBehaviour
 		public const float Position = 0.005f;
 	}
 	
-	[SerializeField] private Transform cameraMount = null;
-	[SerializeField] private bool isUsingHydra = true;
+	[SerializeField] private InputId inputId;
+	/// <summary>
+	/// The type of input currently set, as defined by the InputId enum.
+	/// </summary>
+	public InputId InputId 
+	{
+		get { return this.inputId; }
+		set { this.inputId = value; }
+	}
 	
+	[SerializeField] private Transform cameraMount = null;
 	[SerializeField] private Vector3 offset;
 	[SerializeField] private Vector2 leftStick;
 	[SerializeField] private Vector2 rightStick;
@@ -77,7 +93,7 @@ public class InputManager : MonoBehaviour
 	
 	void Start ()
 	{
-		if (this.isUsingHydra)
+		if (this.InputId == InputId.Hydra)
 		{
 			SixenseInput.ControllerManagerEnabled = false;
 		}
@@ -89,7 +105,7 @@ public class InputManager : MonoBehaviour
 	
 	void Update () 
 	{
-		if (this.isUsingHydra)
+		if (this.InputId == InputId.Hydra)
 		{
 			// Using Razer Hydra controller.
 			UpdateHydra(HydraControllerId.Left);

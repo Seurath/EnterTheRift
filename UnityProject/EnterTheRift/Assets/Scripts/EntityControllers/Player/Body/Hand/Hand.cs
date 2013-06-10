@@ -11,7 +11,6 @@ public class Hand : MonoBehaviour
 		Right = 1
 	}
 	
-	[SerializeField] private bool isUsingHydra = true;
 	[SerializeField] private ControllerId controllerId = ControllerId.Undefined;
 	[SerializeField] private BodyController player = null;
 	[SerializeField] private Animation handAnimation = null;
@@ -39,13 +38,13 @@ public class Hand : MonoBehaviour
 	
 	void Start ()
 	{
-		if (this.isUsingHydra)
+		if (ManagerFactory.InputManager.InputId == InputId.Hydra)
 		{
 			SixenseInput.ControllerManagerEnabled = false;
 		}
-		else
+		else 
 		{
-			offset = new Vector3(0.0f, 0.0f, 1.0f);
+			this.offset = new Vector3(0.0f, 0.0f, 1.0f);
 		}
 		
 		if (player == null)
@@ -56,7 +55,7 @@ public class Hand : MonoBehaviour
 	
 	void Update () 
 	{
-		if (this.isUsingHydra)
+		if (ManagerFactory.InputManager.InputId == InputId.Hydra)
 		{
 			// Using Razer Hydra controller.
 			UpdateHydra();
