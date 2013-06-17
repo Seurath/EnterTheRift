@@ -1,9 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class ColourFade : MonoBehaviour {
-	
-	
+public class ColourFade : MonoBehaviour 
+{	
 	public class AnimatedText
 	{
 		public AnimatedText(string text, float timeBetweenLetters, float fullMessageDisplayTime)
@@ -66,18 +65,21 @@ public class ColourFade : MonoBehaviour {
 	
 	private bool fadeOut = false;
 	
+	private InputManager inputManager;
 	
 	// Use this for initialization
-	void Start () {
-		animatedText = new AnimatedText(introText, timeBetweenLetters, fullMessageDisplayTime);
-		leftHand.CanCalibrate = false;
+	void Start () 
+	{
+		this.inputManager = ManagerFactory.InputManager;
+		this.animatedText = new AnimatedText(introText, timeBetweenLetters, fullMessageDisplayTime);
+		this.inputManager.CanCalibrate = false;
 		leftHand.IsFistDisabled = true;
-		rightHand.CanCalibrate = false;
 		rightHand.IsFistDisabled = true;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		if(animatedText != null)
 		{
 			animatedText.Update ();
@@ -96,10 +98,9 @@ public class ColourFade : MonoBehaviour {
 		
 		if(drawInstructions && animatedText.currentText == instructionsText)
 		{
-			leftHand.IsCalibrated = true;
-			rightHand.IsCalibrated = true;
+			this.inputManager.IsCalibrated = true;
 
-			if(leftHand.IsCalibrated && rightHand.IsCalibrated)
+			if(this.inputManager.IsCalibrated)
 			{
 				animatedText = new AnimatedText(goodLuckText, timeBetweenLetters, 0.0f);
 				drawInstructions = false;

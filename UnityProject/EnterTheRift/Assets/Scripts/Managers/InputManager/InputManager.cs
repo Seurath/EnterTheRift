@@ -42,6 +42,16 @@ public class InputManager : MonoBehaviour
 	[SerializeField] private Vector2 leftStick;
 	[SerializeField] private Vector2 rightStick;
 	
+	// Calibration
+	
+	[SerializeField] private bool canCalibrate = true;
+	public bool CanCalibrate
+	{
+		get { return this.canCalibrate; }
+		set { this.canCalibrate = value; }
+	}
+	public bool IsCalibrated { get; set; }
+	
 	/// <summary>
 	/// Sixense input script that comes packed inside the Sixense Unity Plugin.
 	/// </summary>
@@ -60,6 +70,26 @@ public class InputManager : MonoBehaviour
 	
 	public int NumHyrdaControllers { get { return (int) HydraControllerId.Count; } }
 	
+	private IList<int> hydraBaseOffset = null;
+	public IList<int> HydraBaseOffset
+	{
+		get {
+			if (this.hydraBaseOffset == null)
+			{
+				this.hydraBaseOffset = new List<int>(HydraControllerId.Count.IntValue());
+			}
+			if (this.hydraBaseOffset.Count == 0)
+			{
+				// Initialize all Hydra controller callback objects.
+				for (int i = 0; i < HydraControllerId.Count.IntValue(); i++)
+				{
+					this.hydraBaseOffset.Add(0);
+				}
+			}
+			return this.hydraBaseOffset;
+		}
+	}
+	
 	
 	#region Callbacks
 	
@@ -69,7 +99,7 @@ public class InputManager : MonoBehaviour
 		get {
 			if (this.hydraCallbacks == null)
 			{
-				this.hydraCallbacks = new List<HydraCallbacks>((int) HydraControllerId.Count);
+				this.hydraCallbacks = new List<HydraCallbacks>(HydraControllerId.Count.IntValue());
 			}
 			if (this.hydraCallbacks.Count == 0)
 			{
@@ -96,14 +126,12 @@ public class InputManager : MonoBehaviour
 	
 	void Start ()
 	{
-		if (this.InputId == InputId.Hydra)
+		if (this.InputId == InputId.Hydra
+			&& this.HasSixenseInput)
 		{
 			SixenseInput.ControllerManagerEnabled = false;
 		}
-		else
-		{
-			this.offset = new Vector3(0.0f, 0.0f, 1.0f);
-		}
+		this.IsCalibrated = false;
 	}
 	
 	void Update () 
@@ -131,6 +159,8 @@ public class InputManager : MonoBehaviour
 		int id = controllerId.IntValue();
 		SixenseInput.Controller controller = SixenseInput.Controllers[(int) controllerId];
 		
+		UpdateHydraTrigger(controller, id);
+		
 		// Update position data.
 		UpdateHydraPosition(controller, id);
 			
@@ -141,6 +171,34 @@ public class InputManager : MonoBehaviour
 		UpdateHydraAnalogStick(controller, id);
 	}
 	
+	private void UpdateHydraTrigger (SixenseInput.Controller controller, int controllerId)
+	{
+		if (this.CanCalibrate
+			&& !this.IsCalibrated)
+		{
+			CalibrateHydra(controller);
+			return;
+		}
+		
+		float triggerValue = controller.Trigger;
+		
+		if (triggerValue < InputManager.HydraSensitivity.TriggerPress)
+		{
+			// Trigger is not pressed.
+			
+			if (controller.Trigger < InputManager.HydraSensitivity.TriggerRelease) 
+			{
+				// Trigger is released.
+				this.hydraCallbacks[controllerId].BroadcastTriggerReleaseAction(triggerValue);
+			}
+			return;
+		}
+		else
+		{
+			// Trigger is pressed.
+			this.hydraCallbacks[controllerId].BroadcastTriggerPressAction(triggerValue);
+		}
+	}
 	
 	private void UpdateHydraPosition (SixenseInput.Controller controller, int controllerId)
 	{
@@ -183,6 +241,17 @@ public class InputManager : MonoBehaviour
 	}
 	
 	#endregion Gamepad Input Controls
+	
+	
+	#region Calibration
+	
+	private void CalibrateHydra (SixenseInput.Controller controller)
+	{
+		this.offset = new Vector3(0.0f, 0.0f, controller.Position.z * InputManager.HydraSensitivity.Position);
+		this.IsCalibrated = true;
+	}
+	
+	#endregion Calibration
 	
 }
 

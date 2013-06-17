@@ -12,7 +12,6 @@ public class Hand : MonoBehaviour
 	}
 	
 	[SerializeField] private ControllerId controllerId = ControllerId.Undefined;
-	[SerializeField] private BodyController player = null;
 	[SerializeField] private Animation handAnimation = null;
 	[SerializeField] private HandGrab dynamicCollider = null;
 	[SerializeField] private Transform cameraMount = null;
@@ -23,10 +22,6 @@ public class Hand : MonoBehaviour
 	[SerializeField] private Vector3 handWorldPosition;
 	
 	public bool IsFistDisabled { get; set; }
-	public bool CanCalibrate { get; set; }
-	public bool IsCalibrated { get; set; }
-	
-	private bool isTriggerDown = false;
 	
 	
 	#region MonoBehaviour
@@ -38,32 +33,9 @@ public class Hand : MonoBehaviour
 	
 	void Start ()
 	{
-		if (ManagerFactory.InputManager.InputId == InputId.Hydra)
-		{
-			SixenseInput.ControllerManagerEnabled = false;
-		}
-		else 
+		if (ManagerFactory.InputManager.InputId != InputId.Hydra)
 		{
 			this.offset = new Vector3(0.0f, 0.0f, 1.0f);
-		}
-		
-		if (player == null)
-		{
-			Debug.LogError ("Hand needs a PunchPlayer attached.");
-		}
-	}
-	
-	void Update () 
-	{
-		if (ManagerFactory.InputManager.InputId == InputId.Hydra)
-		{
-			// Using Razer Hydra controller.
-			UpdateHydra();
-		}
-		else 
-		{
-			// Using gamepad controller.
-			UpdateGamepad();
 		}
 	}
 	
@@ -75,10 +47,45 @@ public class Hand : MonoBehaviour
 	private void Initialize ()
 	{
 		this.IsFistDisabled = true;
-		this.CanCalibrate = true;
 	}
 	
 	#endregion Initialization
+	
+	
+	#region Input Control Callbacks
+	
+	private void OnHydraTrigger (float input)
+	{
+		if (input < InputManager.HydraSensitivity.TriggerPress)
+		{
+			// Trigger is not pressed.
+			
+			if (input < InputManager.HydraSensitivity.TriggerRelease) 
+			{
+				SetHandFist(false);
+			}
+			return;
+		}
+		
+		SetHandFist(true);
+	}
+	
+	private void OnHydraStick (Vector2 input)
+	{
+		
+	}
+	
+	private void OnHydraPosition (Vector3 input)
+	{
+		
+	}
+	
+	private void OnHydraRotation (Quaternion input)
+	{
+		
+	}
+	
+	#endregion Input Control Callbacks
 	
 	
 	#region Hydra Input Controls
@@ -102,27 +109,26 @@ public class Hand : MonoBehaviour
 	
 	private void UpdateHydraTrigger (SixenseInput.Controller controller)
 	{
+		InputManager inputManager = ManagerFactory.InputManager;
+		
 		if (controller.Trigger < InputManager.HydraSensitivity.TriggerPress)
 		{
 			// Trigger is not pressed.
 			
 			if (controller.Trigger < InputManager.HydraSensitivity.TriggerRelease) 
 			{
-				this.isTriggerDown = false;
 				SetHandFist(false);
 			}
 			
 			return;
 		}
 		
-		if (this.CanCalibrate
-			&& !this.IsCalibrated)
+		if (inputManager.CanCalibrate
+			&& !inputManager.IsCalibrated)
 		{
 			CalibrateHydra(controller);
 			return;
 		}
-		
-		this.isTriggerDown = true;
 		
 		SetHandFist(true);
 	}
@@ -130,7 +136,7 @@ public class Hand : MonoBehaviour
 	private void CalibrateHydra (SixenseInput.Controller controller)
 	{
 		this.offset = new Vector3(0.0f, 0.0f, controller.Position.z * InputManager.HydraSensitivity.Position);
-		this.IsCalibrated = true;
+		ManagerFactory.InputManager.IsCalibrated = true;
 	}
 	
 	private void UpdateHydraPosition (SixenseInput.Controller controller)
@@ -191,6 +197,7 @@ public class Hand : MonoBehaviour
 	
 	#region Gamepad Input Controls
 	
+	/*
 	private void UpdateGamepad ()
 	{
 		float triggerValue = Input.GetAxis ("Triggers");
@@ -253,6 +260,7 @@ public class Hand : MonoBehaviour
 			}
 		}
 	}
+	*/
 	
 	#endregion Gamepad Input Controls
 	

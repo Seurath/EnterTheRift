@@ -3,20 +3,42 @@ using UnityEngine;
 
 public class HydraCallbacks
 {
-	private Action<Vector3> TriggerAction { get; set; }
-	public void RegisterTriggerAction (Action<Vector3> action)
+	#region Trigger
+	
+	private Action<float> TriggerPressAction { get; set; }
+	public void RegisterTriggerPressAction (Action<float> action)
 	{
-		this.TriggerAction += action;
+		this.TriggerPressAction += action;
 	}
-	public void UnregisterTriggerAction (Action<Vector3> action)
+	public void UnregisterTriggerPressAction (Action<float> action)
 	{
-		this.TriggerAction -= action;
+		this.TriggerPressAction -= action;
 	}
-	public void BroadcastTriggerAction (Vector3 input)
+	public void BroadcastTriggerPressAction (float input)
 	{
-		if (this.TriggerAction == null) { return; }
-		this.TriggerAction(input);
+		if (this.TriggerPressAction == null) { return; }
+		this.TriggerPressAction(input);
 	}
+	
+	private Action<float> TriggerReleaseAction { get; set; }
+	public void RegisterTriggerReleaseAction (Action<float> action)
+	{
+		this.TriggerReleaseAction += action;
+	}
+	public void UnregisterTriggerReleaseAction (Action<float> action)
+	{
+		this.TriggerReleaseAction -= action;
+	}
+	public void BroadcastTriggerReleaseAction (float input)
+	{
+		if (this.TriggerReleaseAction == null) { return; }
+		this.TriggerReleaseAction(input);
+	}
+	
+	#endregion Trigger
+	
+	
+	#region Stick
 	
 	private Action<Vector2> StickAction { get; set; }
 	public void RegisterStickAction (Action<Vector2> action)
@@ -33,6 +55,11 @@ public class HydraCallbacks
 		this.StickAction(input);
 	}
 	
+	#endregion Stick
+	
+	
+	#region Position
+	
 	private Action<Vector3> PositionAction { get; set; }
 	public void RegisterPositionAction (Action<Vector3> action)
 	{
@@ -48,6 +75,11 @@ public class HydraCallbacks
 		this.PositionAction(input);
 	}
 	
+	#endregion Position
+	
+	
+	#region Rotation
+	
 	private Action<Quaternion> RotationAction { get; set; }
 	public void RegisterRotationAction (Action<Quaternion> action)
 	{
@@ -62,4 +94,7 @@ public class HydraCallbacks
 		if (this.RotationAction == null) { return; }
 		this.RotationAction(input);
 	}
+	
+	#endregion Rotation
+	
 }

@@ -4306,7 +4306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
   controllerId: 0
-  player: {fileID: 1129051655}
   handAnimation: {fileID: 332494048}
   dynamicCollider: {fileID: 355070120}
   cameraMount: {fileID: 1258268212}
@@ -19774,7 +19773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
   controllerId: 1
-  player: {fileID: 1129051655}
   handAnimation: {fileID: 1880370214}
   dynamicCollider: {fileID: 1635020290}
   cameraMount: {fileID: 1258268212}
@@ -21389,6 +21387,10 @@ Prefab:
       propertyPath: rightHand
       value: 
       objectReference: {fileID: 1513692865}
+    - target: {fileID: 100000, guid: cfcc025dcbc7b484e952e66ceedec3fa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfcc025dcbc7b484e952e66ceedec3fa, type: 2}
   m_RootGameObject: {fileID: 1910569769}
@@ -24006,7 +24008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1910569770
 MonoBehaviour:
   m_ObjectHideFlags: 0
