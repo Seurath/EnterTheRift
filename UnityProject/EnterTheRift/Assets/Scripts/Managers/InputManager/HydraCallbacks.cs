@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HydraCallbacks
 {
-	public Action<Vector3> TriggerAction { get; private set; }
+	private Action<Vector3> TriggerAction { get; set; }
 	public void RegisterTriggerAction (Action<Vector3> action)
 	{
 		this.TriggerAction += action;
@@ -12,8 +12,13 @@ public class HydraCallbacks
 	{
 		this.TriggerAction -= action;
 	}
+	public void BroadcastTriggerAction (Vector3 input)
+	{
+		if (this.TriggerAction == null) { return; }
+		this.TriggerAction(input);
+	}
 	
-	public Action<Vector2> StickAction { get; private set; }
+	private Action<Vector2> StickAction { get; set; }
 	public void RegisterStickAction (Action<Vector2> action)
 	{
 		this.StickAction += action;
@@ -22,8 +27,13 @@ public class HydraCallbacks
 	{
 		this.StickAction -= action;
 	}
+	public void BroadcastStickAction (Vector2 input)
+	{
+		if (this.StickAction == null) { return; }
+		this.StickAction(input);
+	}
 	
-	public Action<Vector3> PositionAction { get; private set; }
+	private Action<Vector3> PositionAction { get; set; }
 	public void RegisterPositionAction (Action<Vector3> action)
 	{
 		this.PositionAction += action;
@@ -32,8 +42,13 @@ public class HydraCallbacks
 	{
 		this.PositionAction -= action;
 	}
+	public void BroadcastPositionAction (Vector3 input)
+	{
+		if (this.PositionAction == null) { return; }
+		this.PositionAction(input);
+	}
 	
-	public Action<Quaternion> RotationAction;
+	private Action<Quaternion> RotationAction { get; set; }
 	public void RegisterRotationAction (Action<Quaternion> action)
 	{
 		this.RotationAction += action;
@@ -41,5 +56,10 @@ public class HydraCallbacks
 	public void UnregisterRotationAction (Action<Quaternion> action)
 	{
 		this.RotationAction -= action;
+	}
+	public void BroadcastRotationAction (Quaternion input)
+	{
+		if (this.RotationAction == null) { return; }
+		this.RotationAction(input);
 	}
 }

@@ -74,9 +74,9 @@ public class InputManager : MonoBehaviour
 			if (this.hydraCallbacks.Count == 0)
 			{
 				// Initialize all Hydra controller callback objects.
-				for (int i = 0; i < (int)HydraControllerId.Count; i++)
+				for (int i = 0; i < HydraControllerId.Count.IntValue(); i++)
 				{
-					this.hydraCallbacks[i] = new HydraCallbacks();
+					this.hydraCallbacks.Add(new HydraCallbacks());
 				}
 			}
 			return this.hydraCallbacks;
@@ -150,7 +150,7 @@ public class InputManager : MonoBehaviour
 			controllerPosition.y * InputManager.HydraSensitivity.Position,
 			controllerPosition.z * InputManager.HydraSensitivity.Position);
 		
-		this.hydraCallbacks[controllerId].PositionAction(worldLocalPosition);
+		this.hydraCallbacks[controllerId].BroadcastPositionAction(worldLocalPosition);
 	}
 	
 	private void UpdateHydraRotation (SixenseInput.Controller controller, int controllerId)
@@ -161,13 +161,13 @@ public class InputManager : MonoBehaviour
 			controller.Rotation.z,
 			controller.Rotation.w);
 		
-		this.hydraCallbacks[controllerId].RotationAction(worldLocalRotation);
+		this.hydraCallbacks[controllerId].BroadcastRotationAction(worldLocalRotation);
 	}
 	
 	private void UpdateHydraAnalogStick (SixenseInput.Controller controller, int controllerId)
 	{
 		Vector2 stick = new Vector2(controller.JoystickX, controller.JoystickY);
-		this.hydraCallbacks[controllerId].StickAction(stick);
+		this.hydraCallbacks[controllerId].BroadcastStickAction(stick);
 	}
 	
 	#endregion Hydra Input Controls
@@ -183,16 +183,6 @@ public class InputManager : MonoBehaviour
 	}
 	
 	#endregion Gamepad Input Controls
-	
-	
-	#region Helpers
-	
-	public int GetControllerId (HydraControllerId id)
-	{
-		return (int) id;
-	}
-	
-	#endregion Helpers
 	
 }
 
