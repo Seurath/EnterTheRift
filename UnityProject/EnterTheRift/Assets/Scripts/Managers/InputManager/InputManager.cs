@@ -130,6 +130,9 @@ public class InputManager : MonoBehaviour
 			&& this.HasSixenseInput)
 		{
 			SixenseInput.ControllerManagerEnabled = false;
+		} else {
+			SixenseInput.ControllerManagerEnabled = true;
+			this.offset = new Vector3(0.0f, 0.0f, 1.0f);
 		}
 		this.IsCalibrated = false;
 	}
@@ -206,7 +209,7 @@ public class InputManager : MonoBehaviour
 		Vector3 worldLocalPosition = new Vector3(
 			controllerPosition.x * InputManager.HydraSensitivity.Position,
 			controllerPosition.y * InputManager.HydraSensitivity.Position,
-			controllerPosition.z * InputManager.HydraSensitivity.Position);
+			controllerPosition.z * InputManager.HydraSensitivity.Position) - this.offset;
 		
 		this.hydraCallbacks[controllerId].BroadcastPositionAction(worldLocalPosition);
 	}

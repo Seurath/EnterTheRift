@@ -17,6 +17,8 @@ public class BodyController : MonoBehaviour
 	[SerializeField] private float pitch = 0.0f;
 	[SerializeField] private Vector2 pitchClamp = new Vector2(-30.0f, 30.0f);
 	
+	private InputManager inputManager;
+	
 	
 	#region Initialization
 	
@@ -33,8 +35,27 @@ public class BodyController : MonoBehaviour
 	
 	private void RegisterInputCallbacks ()
 	{
-		ManagerFactory.InputManager.HydraCallbacks[(int)HydraControllerId.Left].RegisterStickAction(OnLeftStick);
-		ManagerFactory.InputManager.HydraCallbacks[(int)HydraControllerId.Right].RegisterStickAction(OnRightStick);
+		this.inputManager = ManagerFactory.InputManager;
+		
+		if (this.inputManager.HasSixenseInput)
+		{
+			RegisterHydraInputCallbacks();
+		}
+	}
+	
+	private void RegisterHydraInputCallbacks ()
+	{
+		int leftId = HydraControllerId.Left.IntValue();
+		HydraCallbacks leftCallbacks = this.inputManager.HydraCallbacks[leftId];
+		leftCallbacks.RegisterStickAction(OnLeftStick);
+		leftCallbacks.RegisterTriggerPressAction(OnLeftTriggerPress);
+		leftCallbacks.RegisterTriggerReleaseAction(OnLeftTriggerRelease);
+		
+		int rightId = HydraControllerId.Right.IntValue();
+		HydraCallbacks rightCallbacks = this.inputManager.HydraCallbacks[rightId];
+		rightCallbacks.RegisterStickAction(OnRightStick);
+		rightCallbacks.RegisterTriggerPressAction(OnRightTriggerPress);
+		rightCallbacks.RegisterTriggerReleaseAction(OnRightTriggerRelease);
 	}
 	
 	#endregion Initialization
@@ -57,6 +78,32 @@ public class BodyController : MonoBehaviour
 	
 	#region Input Control Callbacks
 	
+	#region Triggers
+	
+	private void OnLeftTriggerPress (float input)
+	{
+		this.leftHand.SetHandFist(true);
+	}
+	
+	private void OnLeftTriggerRelease (float input)
+	{
+		this.leftHand.SetHandFist(false);
+	}
+	
+	private void OnRightTriggerPress (float input)
+	{
+		this.rightHand.SetHandFist(true);
+	}
+	
+	private void OnRightTriggerRelease (float input)
+	{
+		this.rightHand.SetHandFist(false);
+	}
+	
+	#endregion Triggers
+	
+	
+	#region Sticks
 	
 	private void OnLeftStick (Vector2 input)
 	{
@@ -90,6 +137,8 @@ public class BodyController : MonoBehaviour
 		
 		this.cameraMount.transform.localRotation = Quaternion.Euler(this.pitch, 0.0f, 0.0f);
 	}
+	
+	#endregion Sticks
 	
 	#endregion Input Control Callbacks
 	
