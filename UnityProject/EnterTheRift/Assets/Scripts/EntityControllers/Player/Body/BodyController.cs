@@ -50,12 +50,16 @@ public class BodyController : MonoBehaviour
 		leftCallbacks.RegisterStickAction(OnLeftStick);
 		leftCallbacks.RegisterTriggerPressAction(OnLeftTriggerPress);
 		leftCallbacks.RegisterTriggerReleaseAction(OnLeftTriggerRelease);
+		leftCallbacks.RegisterPositionAction(OnLeftHydraPosition);
+		leftCallbacks.RegisterRotationAction(OnLeftHydraRotation);
 		
 		int rightId = HydraControllerId.Right.IntValue();
 		HydraCallbacks rightCallbacks = this.inputManager.HydraCallbacks[rightId];
 		rightCallbacks.RegisterStickAction(OnRightStick);
 		rightCallbacks.RegisterTriggerPressAction(OnRightTriggerPress);
 		rightCallbacks.RegisterTriggerReleaseAction(OnRightTriggerRelease);
+		rightCallbacks.RegisterPositionAction(OnRightHydraPosition);
+		rightCallbacks.RegisterRotationAction(OnRightHydraRotation);
 	}
 	
 	#endregion Initialization
@@ -139,6 +143,36 @@ public class BodyController : MonoBehaviour
 	}
 	
 	#endregion Sticks
+	
+	
+	#region Position
+	
+	private void OnLeftHydraPosition (Vector3 input)
+	{
+		this.leftHand.SetPosition(input);
+	}
+	
+	private void OnRightHydraPosition (Vector3 input)
+	{
+		this.rightHand.SetPosition(input);
+	}
+	
+	#endregion Position
+	
+	
+	#region Rotation
+	
+	private void OnLeftHydraRotation (Quaternion input)
+	{
+		this.leftHand.SetRotation(input);
+	}
+	
+	private void OnRightHydraRotation (Quaternion input)
+	{
+		this.rightHand.SetRotation(input);
+	}
+	
+	#endregion Rotation
 	
 	#endregion Input Control Callbacks
 	
