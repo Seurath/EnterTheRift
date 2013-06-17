@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11400056}
   - 82: {fileID: 8200006}
   m_Layer: 8
-  m_Name: tempHandL
+  m_Name: HandLeft
   m_TagString: Fist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ GameObject:
   - 114: {fileID: 11400058}
   - 82: {fileID: 8200002}
   m_Layer: 8
-  m_Name: tempHandR
+  m_Name: HandRight
   m_TagString: Fist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,6 +53,7 @@ GameObject:
   - 124: {fileID: 12400000}
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400024}
   m_Layer: 8
   m_Name: CameraLeft
   m_TagString: MainCamera
@@ -84,7 +85,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   m_Layer: 0
-  m_Name: elbowTargetLeft
+  m_Name: ElbowTargetLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +132,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400014}
   m_Layer: 0
-  m_Name: shoulderRight
+  m_Name: ShoulderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +263,7 @@ GameObject:
   - 54: {fileID: 5400002}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: tempHandLKinematic
+  m_Name: HandLeftKinematic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,12 +279,11 @@ GameObject:
   - 4: {fileID: 400032}
   - 33: {fileID: 3300010}
   - 23: {fileID: 2300010}
-  - 114: {fileID: 11400004}
   - 143: {fileID: 14300000}
+  - 114: {fileID: 11400004}
   - 82: {fileID: 8200000}
-  - 82: {fileID: 8200004}
   m_Layer: 8
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +298,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400034}
   m_Layer: 0
-  m_Name: elbowTargetRight
+  m_Name: ElbowTargetRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400036}
   m_Layer: 0
-  m_Name: shoulderLeft
+  m_Name: ShoulderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +332,7 @@ GameObject:
   - 54: {fileID: 5400004}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: tempHandRKinematic
+  m_Name: HandRightKinematic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1324,6 +1324,7 @@ GameObject:
   - 81: {fileID: 8100000}
   - 114: {fileID: 11400054}
   - 114: {fileID: 11400052}
+  - 114: {fileID: 11400022}
   m_Layer: 8
   m_Name: CameraRight
   m_TagString: MainCamera
@@ -2461,9 +2462,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100174}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 26.8895264, y: -2.41749358, z: 22.1647015}
-  m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
 --- !u!20 &2000000
@@ -3169,62 +3170,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!82 &8200004
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100032}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!82 &8200006
 AudioSource:
   m_ObjectHideFlags: 1
@@ -3388,7 +3333,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
-  isUsingHydra: 1
   controllerId: 0
   player: {fileID: 11400004}
   handAnimation: {fileID: 0}
@@ -3408,7 +3352,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
-  isUsingHydra: 1
   controllerId: 1
   player: {fileID: 11400004}
   handAnimation: {fileID: 0}
@@ -3426,18 +3369,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 100032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c037eaae6cbc72e43a8a31729aa48b2e, type: 3}
+  m_Script: {fileID: 11500000, guid: ee0dfefe32bb32b40a71ca9bd407bb00, type: 3}
   m_Name: 
-  joystickLeft: {x: 0, y: 0}
-  joystickRight: {x: 0, y: 0}
-  moveSpeed: 10
-  backwardsMultiplier: .800000012
-  strafeMultiplier: .800000012
-  turnSpeed: 4
+  characterController: {fileID: 14300000}
   cameraMount: {fileID: 400006}
+  moveSpeed: 4
+  backwardsMultiplier: .5
+  strafeMultiplier: .75
+  turnSpeed: 4
   pitch: 0
   pitchClamp: {x: -30, y: 30}
-  cc: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3560,6 +3501,40 @@ MonoBehaviour:
   target: {fileID: 400038}
   transition: 1
   elbowAngle: 0
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1352984e3c6465088f6cc7c4ce6e22, type: 3}
+  m_Name: 
+  glowIntensity: 1.60000002
+  blurIterations: 2
+  blurSpread: .5
+  glowTint: {r: .283582091, g: .283582091, b: .283582091, a: 0}
+  compositeShader: {fileID: 4800000, guid: 96ca71e39c7b6fb4f9bec2c5bf331349, type: 3}
+  blurShader: {fileID: 4800000, guid: fb52973118cf00648825ced2fcca240c, type: 3}
+  downsampleShader: {fileID: 4800000, guid: b14b79b8936134d3f8238f0c2d40d634, type: 3}
+--- !u!114 &11400024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1352984e3c6465088f6cc7c4ce6e22, type: 3}
+  m_Name: 
+  glowIntensity: 1.60000002
+  blurIterations: 2
+  blurSpread: .5
+  glowTint: {r: .283582091, g: .283582091, b: .283582091, a: 0}
+  compositeShader: {fileID: 4800000, guid: 96ca71e39c7b6fb4f9bec2c5bf331349, type: 3}
+  blurShader: {fileID: 4800000, guid: fb52973118cf00648825ced2fcca240c, type: 3}
+  downsampleShader: {fileID: 4800000, guid: b14b79b8936134d3f8238f0c2d40d634, type: 3}
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1

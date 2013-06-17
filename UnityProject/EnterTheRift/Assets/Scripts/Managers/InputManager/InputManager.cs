@@ -38,7 +38,6 @@ public class InputManager : MonoBehaviour
 		set { this.inputId = value; }
 	}
 	
-	[SerializeField] private Transform cameraMount = null;
 	[SerializeField] private Vector3 offset;
 	[SerializeField] private Vector2 leftStick;
 	[SerializeField] private Vector2 rightStick;
@@ -49,14 +48,14 @@ public class InputManager : MonoBehaviour
 	/// <remarks>
 	/// The reference to this script should be set inside ManagerFactory.
 	/// </remarks>
-	public SixenseInput sixenseInputScript { get; set; }
+	public SixenseInput SixenseInputScript { get; set; }
 	
 	/// <summary>
 	/// Whether calls can be made to Sixense input.
 	/// </summary>
 	public bool HasSixenseInput
 	{
-		get { return this.sixenseInputScript != null; }
+		get { return this.SixenseInputScript != null; }
 	}
 	
 	public int NumHyrdaControllers { get { return (int) HydraControllerId.Count; } }

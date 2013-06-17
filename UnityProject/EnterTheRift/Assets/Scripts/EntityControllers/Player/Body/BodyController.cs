@@ -5,17 +5,15 @@ using System.Collections.Generic;
 [RequireComponent(typeof(CharacterController))]
 public class BodyController : MonoBehaviour 
 {
+	[SerializeField] private CharacterController characterController;
+	[SerializeField] private Transform cameraMount = null;
+	
 	[SerializeField] private float moveSpeed = 4.0f;
 	[SerializeField] private float backwardsMultiplier = 0.5f;
 	[SerializeField] private float strafeMultiplier = 0.75f;
-	
 	[SerializeField] private float turnSpeed = 4.0f;
-	[SerializeField] private Transform cameraMount;
-	
 	[SerializeField] private float pitch = 0.0f;
 	[SerializeField] private Vector2 pitchClamp = new Vector2(-30.0f, 30.0f);
-	
-	private CharacterController characterController;
 	
 	
 	#region Initialization

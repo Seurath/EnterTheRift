@@ -4,10 +4,10 @@ using System.Reflection;
 
 public class ManagerFactory : MonoBehaviour
 {
-	[SerializeField] private InputManager inputManagerPrefab = null;
+	[SerializeField] private UnityEngine.Object inputManagerPrefab = null;
 	public static InputManager InputManager { get; private set; }
 	
-	[SerializeField] private SixenseInput sixenseInputPrefab = null;
+	[SerializeField] private UnityEngine.Object sixenseInputPrefab = null;
 	public static SixenseInput SixenseInput { get; private set; }
 	
 	void Awake ()
@@ -20,7 +20,7 @@ public class ManagerFactory : MonoBehaviour
 	{
 		ManagerFactory.SixenseInput = InitializeManager<SixenseInput>(this.sixenseInputPrefab);
 		ManagerFactory.InputManager = InitializeManager<InputManager>(this.inputManagerPrefab);
-		ManagerFactory.InputManager.sixenseInputScript = ManagerFactory.SixenseInput;
+		ManagerFactory.InputManager.SixenseInputScript = ManagerFactory.SixenseInput;
 	}
 	
 	
