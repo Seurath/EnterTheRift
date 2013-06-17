@@ -129,51 +129,46 @@ public class InputManager : MonoBehaviour
 	
 	private void UpdateHydra (HydraControllerId controllerId)
 	{
+		int id = controllerId.IntValue();
 		SixenseInput.Controller controller = SixenseInput.Controllers[(int) controllerId];
 		
 		// Update position data.
-		UpdateHydraPosition(controller);
+		UpdateHydraPosition(controller, id);
 			
 		// Update rotation data.
-		UpdateHydraRotation(controller);
+		UpdateHydraRotation(controller, id);
 		
 		// Update analog stick values.
-		UpdateHydraAnalogStick(controller, controllerId);
+		UpdateHydraAnalogStick(controller, id);
 	}
 	
 	
-	private void UpdateHydraPosition (SixenseInput.Controller controller)
+	private void UpdateHydraPosition (SixenseInput.Controller controller, int controllerId)
 	{
 		Vector3 controllerPosition = controller.Position;
-		Vector3 desiredLocalPosition = new Vector3(controllerPosition.x * .005f,
-												   controllerPosition.y * .005f,
-												   controllerPosition.z * .005f) - offset;
-		if (this.cameraMount != null)
-		{
-			desiredLocalPosition = cameraMount.transform.localRotation * desiredLocalPosition;
-		}
+		Vector3 worldLocalPosition = new Vector3(
+			controllerPosition.x * InputManager.HydraSensitivity.Position,
+			controllerPosition.y * InputManager.HydraSensitivity.Position,
+			controllerPosition.z * InputManager.HydraSensitivity.Position);
 		
-		this.transform.localPosition = desiredLocalPosition;
+		this.hydraCallbacks[controllerId].PositionAction(worldLocalPosition);
 	}
 	
-	private void UpdateHydraRotation (SixenseInput.Controller controller)
+	private void UpdateHydraRotation (SixenseInput.Controller controller, int controllerId)
 	{
-		transform.localRotation = new Quaternion(controller.Rotation.x,
-												 controller.Rotation.y,
-												 controller.Rotation.z,
-												 controller.Rotation.w);
+		Quaternion worldLocalRotation = new Quaternion(
+			controller.Rotation.x,
+			controller.Rotation.y,
+			controller.Rotation.z,
+			controller.Rotation.w);
+		
+		this.hydraCallbacks[controllerId].RotationAction(worldLocalRotation);
 	}
 	
-	private void UpdateHydraAnalogStick (SixenseInput.Controller controller, HydraControllerId id)
+	private void UpdateHydraAnalogStick (SixenseInput.Controller controller, int controllerId)
 	{
-		if (id == HydraControllerId.Left) 
-		{
-			this.hydraCallbacks[(int)id].StickAction(new Vector2(controller.JoystickX, controller.JoystickY));
-		}
-		if (id == HydraControllerId.Right) 
-		{
-			this.hydraCallbacks[(int)id].StickAction(new Vector2(controller.JoystickX, controller.JoystickY));
-		}
+		Vector2 stick = new Vector2(controller.JoystickX, controller.JoystickY);
+		this.hydraCallbacks[controllerId].StickAction(stick);
 	}
 	
 	#endregion Hydra Input Controls
@@ -189,6 +184,16 @@ public class InputManager : MonoBehaviour
 	}
 	
 	#endregion Gamepad Input Controls
+	
+	
+	#region Helpers
+	
+	public int GetControllerId (HydraControllerId id)
+	{
+		return (int) id;
+	}
+	
+	#endregion Helpers
 	
 }
 

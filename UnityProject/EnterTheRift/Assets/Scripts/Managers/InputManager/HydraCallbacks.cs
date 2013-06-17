@@ -33,12 +33,12 @@ public class HydraCallbacks
 		this.PositionAction -= action;
 	}
 	
-	public Action<Vector3> RotationAction;
-	public void RegisterRotationAction (Action<Vector3> action)
+	public Action<Quaternion> RotationAction;
+	public void RegisterRotationAction (Action<Quaternion> action)
 	{
 		this.RotationAction += action;
 	}
-	public void UnregisterRotationAction (Action<Vector3> action)
+	public void UnregisterRotationAction (Action<Quaternion> action)
 	{
 		this.RotationAction -= action;
 	}
