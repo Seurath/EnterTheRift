@@ -5,8 +5,10 @@ using System.Collections.Generic;
 [RequireComponent(typeof(CharacterController))]
 public class BodyController : MonoBehaviour 
 {
-	[SerializeField] private CharacterController characterController;
+	[SerializeField] private CharacterController characterController = null;
 	[SerializeField] private Transform cameraMount = null;
+	[SerializeField] private Hand leftHand = null;
+	[SerializeField] private Hand rightHand = null;
 	
 	[SerializeField] private float moveSpeed = 4.0f;
 	[SerializeField] private float backwardsMultiplier = 0.5f;
@@ -21,6 +23,8 @@ public class BodyController : MonoBehaviour
 	private void VerifySerializedFields ()
 	{
 		if (this.cameraMount == null) { Debug.LogError("Camera mount not set."); }
+		if (this.leftHand == null) { Debug.LogError("Left hand not set."); }
+		if (this.rightHand == null) { Debug.LogError("Right hand not set."); }
 		if (this.characterController == null)
 		{
 			this.characterController = GetComponent<CharacterController>();

@@ -37,8 +37,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff5e0741083c45b42b504563769b1c17, type: 3}
   m_Name: 
-  inputManagerPrefab: {fileID: 11400000, guid: 3f6ed7618c20eca4487d9497fce16fa5, type: 2}
-  sixenseInputPrefab: {fileID: 11400000, guid: 808b2784203ff7c449311585d3d42724, type: 2}
+  inputManagerPrefab: {fileID: 100000, guid: 3f6ed7618c20eca4487d9497fce16fa5, type: 2}
+  sixenseInputPrefab: {fileID: 100000, guid: 808b2784203ff7c449311585d3d42724, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

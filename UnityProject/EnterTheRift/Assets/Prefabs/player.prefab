@@ -101,7 +101,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400012}
   m_Layer: 0
-  m_Name: IKleft
+  m_Name: IKLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +197,7 @@ GameObject:
   - 4: {fileID: 400022}
   - 114: {fileID: 11400018}
   m_Layer: 0
-  m_Name: IKright
+  m_Name: IKRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3335,7 +3335,7 @@ MonoBehaviour:
   m_Name: 
   controllerId: 0
   player: {fileID: 11400004}
-  handAnimation: {fileID: 0}
+  handAnimation: {fileID: 11100000}
   dynamicCollider: {fileID: 11400056}
   cameraMount: {fileID: 400006}
   offset: {x: 0, y: 0, z: 0}
@@ -3354,7 +3354,7 @@ MonoBehaviour:
   m_Name: 
   controllerId: 1
   player: {fileID: 11400004}
-  handAnimation: {fileID: 0}
+  handAnimation: {fileID: 11100002}
   dynamicCollider: {fileID: 11400058}
   cameraMount: {fileID: 400006}
   offset: {x: 0, y: 0, z: 0}
@@ -3373,6 +3373,8 @@ MonoBehaviour:
   m_Name: 
   characterController: {fileID: 14300000}
   cameraMount: {fileID: 400006}
+  leftHand: {fileID: 11400000}
+  rightHand: {fileID: 11400002}
   moveSpeed: 4
   backwardsMultiplier: .5
   strafeMultiplier: .75
