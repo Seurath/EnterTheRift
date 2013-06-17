@@ -2,59 +2,93 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(CharacterController))]
 public class BodyController : MonoBehaviour 
 {
-	public Vector2 joystickLeft;
-	public Vector2 joystickRight;
+	[SerializeField] private float moveSpeed = 4.0f;
+	[SerializeField] private float backwardsMultiplier = 0.5f;
+	[SerializeField] private float strafeMultiplier = 0.75f;
 	
-	public float moveSpeed = 4.0f;
-	public float backwardsMultiplier = 0.5f;
-	public float strafeMultiplier = 0.75f;
+	[SerializeField] private float turnSpeed = 4.0f;
+	[SerializeField] private Transform cameraMount;
 	
-	public float turnSpeed = 4.0f;
-	public Transform cameraMount;
+	[SerializeField] private float pitch = 0.0f;
+	[SerializeField] private Vector2 pitchClamp = new Vector2(-30.0f, 30.0f);
 	
-	public float pitch = 0.0f;
-	public Vector2 pitchClamp = new Vector2(-30.0f, 30.0f);
+	private CharacterController characterController;
 	
-	private CharacterController cc;
-
-	void Start () 
+	
+	#region Initialization
+	
+	private void VerifySerializedFields ()
 	{
-		cc = (CharacterController)GetComponent (typeof(CharacterController));
+		if (this.cameraMount == null) { Debug.LogError("Camera mount not set."); }
+		if (this.characterController == null)
+		{
+			this.characterController = GetComponent<CharacterController>();
+		}
 	}
 	
-	void Update () 
+	private void RegisterInputCallbacks ()
+	{
+		ManagerFactory.InputManager.HydraCallbacks[(int)HydraControllerId.Left].RegisterStickAction(OnLeftStick);
+		ManagerFactory.InputManager.HydraCallbacks[(int)HydraControllerId.Right].RegisterStickAction(OnRightStick);
+	}
+	
+	#endregion Initialization
+	
+	
+	#region MonoBehaviour
+	
+	void Awake ()
+	{
+		VerifySerializedFields();
+	}
+	
+	void Start ()
+	{
+		RegisterInputCallbacks();
+	}
+	
+	#endregion MonoBehaviour
+	
+	
+	#region Input Control Callbacks
+	
+	
+	private void OnLeftStick (Vector2 input)
 	{
 		// Handle movement
-		float xMovement = joystickLeft.x;
-		xMovement *= moveSpeed * strafeMultiplier;
+		float xMovement = input.x;
+		xMovement *= this.moveSpeed * this.strafeMultiplier;
 		
-		float zMovement = joystickLeft.y;
-		zMovement *= moveSpeed;
-		if(zMovement < 0)
+		float zMovement = input.y;
+		zMovement *= this.moveSpeed;
+		if (zMovement < 0)
 		{
-			zMovement *= backwardsMultiplier;
+			zMovement *= this.backwardsMultiplier;
 		}
 		
 		Vector3 localMovementSpeed = new Vector3(xMovement, 0.0f, zMovement);
-		cc.SimpleMove(transform.TransformDirection(localMovementSpeed));
-		
-		transform.Rotate (0.0f, joystickRight.x * turnSpeed, 0.0f);
-		if(cameraMount != null)
-		{
-			pitch -= joystickRight.y * turnSpeed;
-			if(pitch > pitchClamp.y)
-			{
-				pitch = pitchClamp.y;
-			}
-			else if(pitch < pitchClamp.x)
-			{
-				pitch = pitchClamp.x;
-			}
-			
-			cameraMount.transform.localRotation = Quaternion.Euler (pitch, 0.0f, 0.0f);
-		}
+		this.characterController.SimpleMove(this.transform.TransformDirection(localMovementSpeed));
 	}
+	
+	private void OnRightStick (Vector2 input)
+	{
+		this.transform.Rotate(0.0f, input.x * turnSpeed, 0.0f);
+		this.pitch -= input.y * this.turnSpeed;
+		if (this.pitch > this.pitchClamp.y)
+		{
+			this.pitch = this.pitchClamp.y;
+		}
+		else if (this.pitch < this.pitchClamp.x)
+		{
+			this.pitch = this.pitchClamp.x;
+		}
+		
+		this.cameraMount.transform.localRotation = Quaternion.Euler(this.pitch, 0.0f, 0.0f);
+	}
+	
+	#endregion Input Control Callbacks
 	
 }

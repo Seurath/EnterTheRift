@@ -65,15 +65,6 @@ public class Hand : MonoBehaviour
 			// Using gamepad controller.
 			UpdateGamepad();
 		}
-		
-		if (this.controllerId == ControllerId.Left)
-		{
-			this.player.joystickLeft = this.leftStick;
-		}
-		if (this.controllerId == ControllerId.Right)
-		{
-			this.player.joystickRight = this.rightStick;
-		}
 	}
 	
 	#endregion MonoBehaviour
