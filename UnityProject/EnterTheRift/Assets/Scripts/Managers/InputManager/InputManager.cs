@@ -64,14 +64,18 @@ public class InputManager : MonoBehaviour
 	
 	#region Callbacks
 	
-	private List<HydraCallbacks> hydraCallbacks = new List<HydraCallbacks>((int) HydraControllerId.Count);
+	private List<HydraCallbacks> hydraCallbacks = null;
 	public List<HydraCallbacks> HydraCallbacks
 	{
 		get {
+			if (this.hydraCallbacks == null)
+			{
+				this.hydraCallbacks = new List<HydraCallbacks>((int) HydraControllerId.Count);
+			}
 			if (this.hydraCallbacks.Count == 0)
 			{
 				// Initialize all Hydra controller callback objects.
-				for (int i = 0; i < this.hydraCallbacks.Count; i++)
+				for (int i = 0; i < (int)HydraControllerId.Count; i++)
 				{
 					this.hydraCallbacks[i] = new HydraCallbacks();
 				}

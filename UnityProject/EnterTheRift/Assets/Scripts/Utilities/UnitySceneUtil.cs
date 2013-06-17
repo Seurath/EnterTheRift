@@ -3,7 +3,12 @@ using UnityEngine;
 
 public static class UnitySceneUtility
 {
-	public static GameObject AnchorGameObjectAtTransform (GameObject target, Transform transform, bool doNormalizeScale = true)
+	public static GameObject AnchorGameObjectAtTransform (GameObject target, Transform transform)
+	{
+		return AnchorGameObjectAtTransform(target, transform, true);
+	}
+	
+	public static GameObject AnchorGameObjectAtTransform (GameObject target, Transform transform, bool doNormalizeScale)
 	{
 		target.transform.parent = transform;
 		target.transform.localPosition = Vector3.zero;
