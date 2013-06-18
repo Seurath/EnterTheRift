@@ -164,6 +164,8 @@ public class InputManager : MonoBehaviour
 		
 		UpdateHydraTrigger(controller, id);
 		
+		if (!this.IsCalibrated) { return; }
+		
 		// Update position data.
 		UpdateHydraPosition(controller, id);
 			
@@ -176,13 +178,6 @@ public class InputManager : MonoBehaviour
 	
 	private void UpdateHydraTrigger (SixenseInput.Controller controller, int controllerId)
 	{
-		if (this.CanCalibrate
-			&& !this.IsCalibrated)
-		{
-			CalibrateHydra(controller);
-			return;
-		}
-		
 		float triggerValue = controller.Trigger;
 		
 		if (triggerValue < InputManager.HydraSensitivity.TriggerPress)
@@ -196,11 +191,18 @@ public class InputManager : MonoBehaviour
 			}
 			return;
 		}
-		else
+		
+		// Trigger is pressed.
+		// First check for calibration.
+		if (this.CanCalibrate
+			&& !this.IsCalibrated)
 		{
-			// Trigger is pressed.
-			this.hydraCallbacks[controllerId].BroadcastTriggerPressAction(triggerValue);
+			CalibrateHydra(controller);
+			return;
 		}
+		
+		// Broatcast trigger press.
+		this.hydraCallbacks[controllerId].BroadcastTriggerPressAction(triggerValue);
 	}
 	
 	private void UpdateHydraPosition (SixenseInput.Controller controller, int controllerId)

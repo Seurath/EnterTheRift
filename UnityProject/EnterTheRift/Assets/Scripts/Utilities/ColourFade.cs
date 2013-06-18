@@ -73,8 +73,8 @@ public class ColourFade : MonoBehaviour
 		this.inputManager = ManagerFactory.InputManager;
 		this.animatedText = new AnimatedText(introText, timeBetweenLetters, fullMessageDisplayTime);
 		this.inputManager.CanCalibrate = false;
-		leftHand.IsFistDisabled = true;
-		rightHand.IsFistDisabled = true;
+		leftHand.IsFistEnabled = true;
+		rightHand.IsFistEnabled = true;
 	}
 	
 	// Update is called once per frame
@@ -113,8 +113,8 @@ public class ColourFade : MonoBehaviour
 			fadeTimer += Time.deltaTime;
 			if(fadeTimer >= fadeTime)
 			{
-				leftHand.IsFistDisabled = false;
-				rightHand.IsFistDisabled = false;
+				leftHand.IsFistEnabled = false;
+				rightHand.IsFistEnabled = false;
 				Destroy (gameObject);
 			}
 		}

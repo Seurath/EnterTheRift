@@ -8,7 +8,7 @@ public class Hand : MonoBehaviour
 	[SerializeField] private HandGrab dynamicCollider = null;
 	[SerializeField] private Vector3 handWorldPosition;
 	
-	public bool IsFistDisabled { get; set; }
+	public bool IsFistEnabled { get; set; }
 	
 	
 	#region MonoBehaviour
@@ -25,7 +25,7 @@ public class Hand : MonoBehaviour
 	
 	private void Initialize ()
 	{
-		this.IsFistDisabled = true;
+		this.IsFistEnabled = false;
 	}
 	
 	#endregion Initialization
@@ -35,6 +35,14 @@ public class Hand : MonoBehaviour
 	
 	public void SetHandFist (bool isEnabled)
 	{
+		if (this.IsFistEnabled == isEnabled) 
+		{
+			// The hand is already in the set state. 
+			// No need to do anything.
+			return; 
+		}
+		
+		this.IsFistEnabled = isEnabled;
 		bool isHandAnimationSet = this.handAnimation != null;
 		
 		if (isEnabled)
@@ -54,10 +62,9 @@ public class Hand : MonoBehaviour
 			
 			if (isHandAnimationSet)
 			{
-				this.handAnimation.Play ("unfist");
+				this.handAnimation.Play("unfist");
 			}
 		}
-		
 	}
 	
 	public void SetPosition (Vector3 position)
@@ -67,12 +74,6 @@ public class Hand : MonoBehaviour
 	
 	public void SetRotation (Quaternion rotation)
 	{
-		if (this.IsFistDisabled)
-		{
-			this.transform.localRotation = new Quaternion();
-			return;
-		}
-		
 		this.transform.localRotation = rotation;
 	}
 	

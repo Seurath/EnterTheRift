@@ -3293,7 +3293,7 @@ Animation:
   m_GameObject: {fileID: 100090}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: dc048c2ba1ce67647bdaa1f28885e51c, type: 3}
+  m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: 03aa6a6303954b64bbbfeb3a6041d2a7, type: 3}
   - {fileID: 7400000, guid: dc048c2ba1ce67647bdaa1f28885e51c, type: 3}
@@ -3312,7 +3312,7 @@ Animation:
   m_GameObject: {fileID: 100026}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ce318836092c19a4f9548254afa8db04, type: 3}
+  m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400002, guid: 453fc08597c10064da768b56b82606c4, type: 3}
   - {fileID: 7400000, guid: ce318836092c19a4f9548254afa8db04, type: 3}
@@ -3333,14 +3333,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
-  controllerId: 0
-  player: {fileID: 11400004}
   handAnimation: {fileID: 11100000}
   dynamicCollider: {fileID: 11400056}
-  cameraMount: {fileID: 400006}
-  offset: {x: 0, y: 0, z: 0}
-  leftStick: {x: 0, y: 0}
-  rightStick: {x: 0, y: 0}
   handWorldPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -3352,14 +3346,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
-  controllerId: 1
-  player: {fileID: 11400004}
   handAnimation: {fileID: 11100002}
   dynamicCollider: {fileID: 11400058}
-  cameraMount: {fileID: 400006}
-  offset: {x: 0, y: 0, z: 0}
-  leftStick: {x: 0, y: 0}
-  rightStick: {x: 0, y: 0}
   handWorldPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &11400004
 MonoBehaviour:
