@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f62ce90fd0e96d444890475cc05e61b7
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - blankCubemap: {fileID: 8900000, guid: db739e1a60fad6a4799358d07ec8a1f7, type: 2}
+  - antialiasingShader: {fileID: 4800000, guid: cd5b323dcc592457790ff18b528f5e67,
+      type: 3}
+  - encodeShader: {fileID: 4800000, guid: 828e665393fc308499addc4624e54e78, type: 3}
+  - cubeShader: {fileID: 4800000, guid: 6318d094176f7fd4c9e05c13eb9057fc, type: 3}
+  - quadShader: {fileID: 4800000, guid: 6b2ca9694517e09499d458bbfa9147a4, type: 3}
+  - blurShader: {fileID: 4800000, guid: 0f064d4583914cb428f9d51e936692c9, type: 3}
+  - shadowShader: {fileID: 4800000, guid: 7f4630535d851ea4d9e769d8bb4fa72a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
