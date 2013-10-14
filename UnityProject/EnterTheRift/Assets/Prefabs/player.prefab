@@ -283,7 +283,7 @@ GameObject:
   - 114: {fileID: 11400004}
   - 82: {fileID: 8200000}
   m_Layer: 8
-  m_Name: Player
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2607,7 +2607,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2625,7 +2625,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2643,7 +2643,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2859,7 +2859,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3079,6 +3079,8 @@ AudioSource:
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3135,6 +3137,8 @@ AudioSource:
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3191,6 +3195,8 @@ AudioSource:
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3333,6 +3339,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   handAnimation: {fileID: 11100000}
   dynamicCollider: {fileID: 11400056}
   handWorldPosition: {x: 0, y: 0, z: 0}
@@ -3346,6 +3353,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627b312a58540b14c95dc174e9f53919, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   handAnimation: {fileID: 11100002}
   dynamicCollider: {fileID: 11400058}
   handWorldPosition: {x: 0, y: 0, z: 0}
@@ -3359,6 +3367,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee0dfefe32bb32b40a71ca9bd407bb00, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   characterController: {fileID: 14300000}
   cameraMount: {fileID: 400006}
   leftHand: {fileID: 11400000}
@@ -3379,6 +3388,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5be85f8438ca3145aac56e800a217cf, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: fa77fe97b0170804ab2b486d1cf3042f, type: 2}
   _Center: {x: .5, y: .5}
   _ScaleIn: {x: 1, y: 1}
@@ -3396,6 +3406,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 467c1e6bb64de664bbba9800bb135078, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   NeckPosition: {x: 0, y: 0, z: 0}
   EyePosition: {x: 0, y: .0900000036, z: .159999996}
 --- !u!114 &11400010
@@ -3408,6 +3419,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   InitialPredictionTime: .0299999993
   InitialAccelGain: .0500000007
 --- !u!114 &11400012
@@ -3420,6 +3432,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4745911d6ef5304f996e1434f655e38, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   upperArm: {fileID: 400036}
   forearm: {fileID: 400028}
   hand: {fileID: 400040}
@@ -3438,6 +3451,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1f03774c9dc32e48aaa149fe9ef715e, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   forearm: {fileID: 0}
   hand: {fileID: 0}
   target: {fileID: 400038}
@@ -3453,6 +3467,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1f03774c9dc32e48aaa149fe9ef715e, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   forearm: {fileID: 0}
   hand: {fileID: 0}
   target: {fileID: 400038}
@@ -3468,6 +3483,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4745911d6ef5304f996e1434f655e38, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   upperArm: {fileID: 400014}
   forearm: {fileID: 400016}
   hand: {fileID: 400012}
@@ -3486,6 +3502,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1f03774c9dc32e48aaa149fe9ef715e, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   forearm: {fileID: 0}
   hand: {fileID: 0}
   target: {fileID: 400038}
@@ -3501,6 +3518,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1352984e3c6465088f6cc7c4ce6e22, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   glowIntensity: 1.60000002
   blurIterations: 2
   blurSpread: .5
@@ -3518,6 +3536,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1352984e3c6465088f6cc7c4ce6e22, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   glowIntensity: 1.60000002
   blurIterations: 2
   blurSpread: .5
@@ -3535,6 +3554,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1f03774c9dc32e48aaa149fe9ef715e, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   forearm: {fileID: 0}
   hand: {fileID: 0}
   target: {fileID: 400038}
@@ -3550,6 +3570,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b221c0eb29f564eb7c17a42ad5dca2, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   uvAnimationTileX: 2
   uvAnimationTileY: 4
   framesPerSecond: 20
@@ -3563,6 +3584,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd337313a6f4bd245afb94df64910016, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   tracker: {fileID: 100038}
 --- !u!114 &11400034
 MonoBehaviour:
@@ -3574,6 +3596,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b221c0eb29f564eb7c17a42ad5dca2, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   uvAnimationTileX: 2
   uvAnimationTileY: 4
   framesPerSecond: 20
@@ -3587,6 +3610,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b221c0eb29f564eb7c17a42ad5dca2, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   uvAnimationTileX: 2
   uvAnimationTileY: 4
   framesPerSecond: 20
@@ -3600,6 +3624,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b221c0eb29f564eb7c17a42ad5dca2, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   uvAnimationTileX: 2
   uvAnimationTileY: 4
   framesPerSecond: 20
@@ -3613,6 +3638,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b221c0eb29f564eb7c17a42ad5dca2, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   uvAnimationTileX: 2
   uvAnimationTileY: 4
   framesPerSecond: 20
@@ -3626,6 +3652,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b221c0eb29f564eb7c17a42ad5dca2, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   uvAnimationTileX: 2
   uvAnimationTileY: 4
   framesPerSecond: 20
@@ -3639,6 +3666,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b221c0eb29f564eb7c17a42ad5dca2, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   uvAnimationTileX: 2
   uvAnimationTileY: 4
   framesPerSecond: 20
@@ -3652,6 +3680,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96b221c0eb29f564eb7c17a42ad5dca2, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   uvAnimationTileX: 2
   uvAnimationTileY: 4
   framesPerSecond: 20
@@ -3665,6 +3694,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd337313a6f4bd245afb94df64910016, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   tracker: {fileID: 100030}
 --- !u!114 &11400050
 MonoBehaviour:
@@ -3676,6 +3706,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   NeckPosition: {x: 0, y: .699999988, z: 0}
   EyeCenterPosition: {x: 0, y: .150000006, z: .0900000036}
   FollowOrientation: {fileID: 400006}
@@ -3698,6 +3729,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5be85f8438ca3145aac56e800a217cf, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: fa77fe97b0170804ab2b486d1cf3042f, type: 2}
   _Center: {x: .5, y: .5}
   _ScaleIn: {x: 1, y: 1}
@@ -3715,6 +3747,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 467c1e6bb64de664bbba9800bb135078, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   NeckPosition: {x: 0, y: 0, z: 0}
   EyePosition: {x: 0, y: .0900000036, z: .159999996}
 --- !u!114 &11400056
@@ -3727,6 +3760,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf665b4148c52864287dd7e4bc26a4b6, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   grabSound: {fileID: 0}
   itemsInReach: []
   heldItems: []
@@ -3745,6 +3779,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf665b4148c52864287dd7e4bc26a4b6, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   grabSound: {fileID: 8200002}
   itemsInReach: []
   heldItems: []
